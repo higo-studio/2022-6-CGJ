@@ -54,7 +54,7 @@ public class MovableManager : MonoBehaviour
 
     public void SettleupHats()
     {
-        var center = Movables.Count / 2f;
+        var center = (Movables.Count - 1) / 2f;
         for (var i = 0; i < Movables.Count; i++)
         {
             Movables[i].position = new Vector3((i - center) * 4, 0, 0);
