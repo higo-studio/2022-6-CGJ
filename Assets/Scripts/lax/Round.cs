@@ -16,7 +16,7 @@ public class Round
 
     // 帽子的转速
     [SerializeField]
-    public int hatSpeed;
+    public float hatSpeed;
 
     // 帽子转的次数
     [SerializeField]
@@ -28,5 +28,5 @@ public class Round
 
     // 结局类型：选小球还是输入,1为选小球，2为输入
     [SerializeField]
-    public string endType;
+    public int endType;
 }
