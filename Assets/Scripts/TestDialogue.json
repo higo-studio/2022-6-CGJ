@@ -1,22 +1,22 @@
 {
     "items": [
-      {
-        "speaker": "",
-        "content": "where is the ball",
-        "menuText": "",
-        "linkTo": []
-      },
-      {
-        "speaker": "",
-        "content": "stupid",
-        "menuText": "",
-        "linkTo": []
-      },
-      {
-        "speaker": "",
-        "content": "error",
-        "menuText": "",
-        "linkTo": [-1]
-      }
-    ]
-  }
+        {
+            "speaker": "",
+            "content": "111111111111111111111",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "22222222222222222222",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+    
+    "question": {
+        "type": 1,
+        "question": "球在哪",
+        "options": ["嗨嗨嗨", "来了嗷", "老干妈"]
+    }
+}
