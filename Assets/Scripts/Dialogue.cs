@@ -31,11 +31,12 @@ public class Dialogue : MonoBehaviour
     private int currIndex;
 
 
-    void start()
+    void Start()
     {
         DisabledUI();
         Debug.Log("设置不可见");
         // test
+        init();
     }
 
     public void init() {
