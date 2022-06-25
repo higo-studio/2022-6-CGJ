@@ -39,7 +39,7 @@ public class Dialogue : MonoBehaviour
     {
         DisabledUI();
         // test
-        // Speak(Json);
+        Speak(Json);
     }
 
     void SetJson(TextAsset jsonAseet)
