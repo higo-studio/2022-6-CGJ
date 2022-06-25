@@ -35,6 +35,7 @@ public class RelativePoint
 public class MovableManager : MonoBehaviour
 {
     static System.Random Random = new System.Random();
+    public bool AutoRun = true;
     [Range(0.2f, 5)]
     public float Duration = 2f;
     public Transform Container;
@@ -58,7 +59,14 @@ public class MovableManager : MonoBehaviour
     void Start()
     {
         swapTuples = new Queue<(int, int)>();
+        if (AutoRun) Run();
+    }
 
+    void Run()
+    {
+        currentRound = -1;
+        swapTuples.Clear();
+        
         CollectHats();
         SettleupHats();
         indexs = new int[Movables.Count];
@@ -158,7 +166,7 @@ public class MovableManager : MonoBehaviour
             CreatePutBallAnimation(indexs.FirstIndex(val => val == startIdx), 4).AppendCallback(() => Debug.Log("Finish"));
             return;
         }
-        
+
         var seq = DOTween.Sequence();
         for (int i = 0; i < ParallelCount; i++)
         {
@@ -177,7 +185,7 @@ public class MovableManager : MonoBehaviour
             var temp = Movables[aIdx];
             Movables[aIdx] = Movables[bIdx];
             Movables[bIdx] = temp;
-            
+
             var temp1 = indexs[aIdx];
             indexs[aIdx] = indexs[bIdx];
             indexs[bIdx] = temp1;
