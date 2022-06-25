@@ -33,5 +33,10 @@ public class Round
 
     // 结局类型：选小球还是输入,1为选小球，2为输入
     [SerializeField]
-    public int endType;
+    public RoundEndType endType;
+}
+
+public enum RoundEndType
+{
+    SelectBall, TextInput
 }

@@ -31,11 +31,12 @@ public class Dialogue : MonoBehaviour
     private int currIndex;
 
 
-    void start()
+    void Start()
     {
         DisabledUI();
         Debug.Log("设置不可见");
         // test
+        init();
     }
 
     public void init() {
@@ -85,7 +86,10 @@ public class Dialogue : MonoBehaviour
     {
         speaking = false;
         DisabledUI();
-        // callback
+        if(EventsCenter.AskQuestion != null)
+        {
+            EventsCenter.AskQuestion.Invoke(this, new EventArgs());
+        }
     }
 
     public void EnableUI()

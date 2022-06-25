@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System;
+using System.Threading.Tasks;
+using DG.Tweening;
 
 public class RoundManager : MonoBehaviour
 {
@@ -8,11 +10,14 @@ public class RoundManager : MonoBehaviour
 
     public Action<int> endFunc;
 
-    private int nowIdx = 0;
+    public GameObject selectUI;
+
+    private int nowIdx = 1;
     MovableManager move;
 
     private void Start()
     {
+        selectUI.SetActive(false);
         move = gameObject.GetComponent<MovableManager>();
         endFunc += selectGame;
         this.initRound(nowIdx);
@@ -20,6 +25,7 @@ public class RoundManager : MonoBehaviour
 
     public void nextRound()
     {
+        selectUI.SetActive(true);
         nowIdx++;
         this.initRound(nowIdx);
     }
@@ -39,18 +45,50 @@ public class RoundManager : MonoBehaviour
         move.init(endFunc);
     }
 
-    public void selectGame(int idx)
+    private TaskCompletionSource<int> hatRayCastSource;
+    public async void selectGame(int idx)
     {
+        selectUI.SetActive(true);
         Dialogue talk = gameObject.GetComponent<Dialogue>();
         talk.init();
         // 选择阶段
-        if (round[nowIdx].endType == 1)
+        if (round[nowIdx].endType == RoundEndType.SelectBall)
         {
             // 选择小球
+            hatRayCastSource = new TaskCompletionSource<int>();
+            var hitIdx = await hatRayCastSource.Task;
+
+            var isCorret = hitIdx == idx;
+            move.CreatePutBallAnimation(move.GetEndIndexFromStartIndex(hitIdx), isCorret).AppendCallback(() =>
+            {
+                if (isCorret)
+                {
+                    Debug.Log("选择成功");
+                }
+                else
+                {
+                    Debug.Log("选择失败");
+                }
+                endGame();
+            });
         }
         else
         {
             // 输入文字
+        }
+    }
+
+    private void Update()
+    {
+        if (hatRayCastSource != null && Input.GetMouseButton(0))
+        {
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out var hitInfo, Mathf.Infinity, 1 << 6) 
+                && hitInfo.transform.TryGetComponent<Hat>(out var hatComp))
+            {
+                hatRayCastSource.SetResult(hatComp.Index);
+                hatRayCastSource = null;
+            }
         }
     }
 
