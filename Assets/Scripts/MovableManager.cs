@@ -5,6 +5,9 @@ using System;
 using MyBox;
 using DG.Tweening;
 using DG.Tweening.Core;
+using DG.Tweening.Plugins.Core.PathCore;
+using DG.Tweening.Plugins.Options;
+using DG.Tweening.Plugins;
 
 [Serializable]
 public class RelativePoint
@@ -39,10 +42,25 @@ public class MovableManager : MonoBehaviour
     [Header("Ô¤ÀÀÇø")]
     [ReadOnly]
     public List<Transform> Movables;
+
+    private Queue<(int, int)> swapTuples;
     // Start is called before the first frame update
     void Start()
     {
         CollectHats();
+        SettleupHats();
+
+        swapTuples = new Queue<(int, int)>();
+        Append((0, 1), (1, 6), (2, 6), (3, 5));
+        Next();
+    }
+
+    void Append(params (int, int)[] tuples)
+    {
+        foreach (var tuple in tuples)
+        {
+            swapTuples.Enqueue(tuple);
+        }
     }
 
     public void CollectHats()
@@ -73,8 +91,6 @@ public class MovableManager : MonoBehaviour
         var bT = b.DOPath(
             new Vector3[] { a.transform.position, APoint.Get(b.position, a.position), BPoint.Get(a.position, b.position) }
             , Duration, PathType.CubicBezier, PathMode.Sidescroller2D);
-
-        //aT.PathGetDrawPoints
         return (aT, bT);
     }
 
@@ -85,22 +101,27 @@ public class MovableManager : MonoBehaviour
         return seq;
     }
 
-    public Tween Swap(int aIdx, int bIdx)
+    public void Next()
+    {
+        if (!swapTuples.TryDequeue(out var tuple))
+        {
+            Debug.Log("Finish");
+        }
+        else
+        {
+            Swap(tuple.Item1, tuple.Item2).AppendCallback(() => Next());
+        }
+    }
+
+    public Sequence Swap(int aIdx, int bIdx)
     {
         var (ta, tb) = CreateSwapAnimation(aIdx, bIdx);
         var t = Combine(ta, tb);
-        DOTween.Sequence().Append(t).AppendCallback(() =>
+        return DOTween.Sequence().Append(t).AppendCallback(() =>
         {
             var temp = Movables[aIdx];
             Movables[aIdx] = Movables[bIdx];
             Movables[bIdx] = temp;
         });
-        return t;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
