@@ -55,11 +55,16 @@ public class MovableManager : MonoBehaviour
     private int currentRound = -1;
     private int[] indexs;
     private int startIdx;
+
+    private Action<int> end;
+    private int endIdx = 0;
+
     // Start is called before the first frame update
-    void Start()
+    public void init(Action<int> endFunc)
     {
+        end = endFunc;
         swapTuples = new Queue<(int, int)>();
-        if (AutoRun) Run();
+        Run();
     }
 
     void Run()
@@ -163,7 +168,7 @@ public class MovableManager : MonoBehaviour
         Duration = Mathf.Lerp(0.2f, 1.5f, factor);
         if (swapTuples.Count < ParallelCount)
         {
-            CreatePutBallAnimation(indexs.FirstIndex(val => val == startIdx), 4).AppendCallback(() => Debug.Log("Finish"));
+            end.Invoke(indexs.FirstIndex(val => val == startIdx));
             return;
         }
 

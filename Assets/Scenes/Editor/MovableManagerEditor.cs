@@ -24,9 +24,6 @@ public class MovableManagerEditor : Editor
     private MovableManager t;
     private GUIStyle labelStyle;
 
-    private void Awake()
-    {
-    }
     private void OnEnable()
     {
         t = (MovableManager)target;

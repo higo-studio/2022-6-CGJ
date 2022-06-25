@@ -6,11 +6,15 @@ using System;
 public class RoundManager : MonoBehaviour
 {
     public List<Round> round = new List<Round>();
+    public Action<int> endFunc;
+
     public int nowIdx = 0;
     // Use this for initialization
-    void Start()
-    {
 
+    private void Start()
+    {
+        endFunc += selectGame;
+        this.initRound(nowIdx);
     }
 
     public void nextRound()
@@ -22,18 +26,23 @@ public class RoundManager : MonoBehaviour
     public void initRound(int idx)
     {
         // 初始化当前关卡的设置
-
+        Debug.Log("数据初始化完成");
         startGame();
     }
 
     public void startGame()
     {
         // 开始游戏
-        selectGame();
+        Debug.Log("开始游戏");
+        MovableManager move = gameObject.GetComponent<MovableManager>();
+        move.init(endFunc);
     }
 
-    public void selectGame()
+    public void selectGame(int idx)
     {
+        Debug.Log("选择答案阶段,答案为"+idx);
+        Dialogue talk = gameObject.GetComponent<Dialogue>();
+        talk.init();
         // 选择阶段
         if (round[nowIdx].endType == "1")
         {
