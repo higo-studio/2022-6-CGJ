@@ -10,11 +10,14 @@ public class RoundManager : MonoBehaviour
 
     public Action<int> endFunc;
 
-    private int nowIdx = 0;
+    public GameObject selectUI;
+
+    private int nowIdx = 1;
     MovableManager move;
 
     private void Start()
     {
+        selectUI.SetActive(false);
         move = gameObject.GetComponent<MovableManager>();
         endFunc += selectGame;
         this.initRound(nowIdx);
@@ -22,6 +25,7 @@ public class RoundManager : MonoBehaviour
 
     public void nextRound()
     {
+        selectUI.SetActive(true);
         nowIdx++;
         this.initRound(nowIdx);
     }
@@ -44,6 +48,7 @@ public class RoundManager : MonoBehaviour
     private TaskCompletionSource<int> hatRayCastSource;
     public async void selectGame(int idx)
     {
+        selectUI.SetActive(true);
         Dialogue talk = gameObject.GetComponent<Dialogue>();
         talk.init();
         // Ñ¡Ôñ½×¶Î
@@ -64,6 +69,7 @@ public class RoundManager : MonoBehaviour
                 {
                     Debug.Log("Ñ¡ÔñÊ§°Ü");
                 }
+                endGame();
             });
         }
         else
@@ -80,7 +86,6 @@ public class RoundManager : MonoBehaviour
             if (Physics.Raycast(ray, out var hitInfo, Mathf.Infinity, 1 << 6) 
                 && hitInfo.transform.TryGetComponent<Hat>(out var hatComp))
             {
-                Debug.Log(hitInfo.transform.name);
                 hatRayCastSource.SetResult(hatComp.Index);
                 hatRayCastSource = null;
             }

@@ -18,22 +18,20 @@ public class QuestionItem
     public string[] options;
 }
 
-[RequireComponent(typeof(CanvasGroup))]
 public class QuestionAndAnswer : MonoBehaviour
 {
 
     public Text text;
     public TextAsset Json;
     public GameObject buttonPrefab;
+    public CanvasGroup cg;
     private QuestionItem questionItem;
     private AnswerButton[] buttons;
-    private CanvasGroup cg;
 
     // Start is called before the first frame update
     void Start()
     {
         EventsCenter.AskQuestion += OnAsk;
-        cg = GetComponent<CanvasGroup>();
         EventsCenter.MakeAnswer += OnMakeAnswer;
         DisabledUI();
     }
@@ -78,7 +76,6 @@ public class QuestionAndAnswer : MonoBehaviour
 
     public void EnableUI()
     {
-        CanvasGroup cg = GetComponent<CanvasGroup>();
         cg.alpha = 1;
         cg.blocksRaycasts = true;
         cg.interactable = true;
@@ -86,7 +83,6 @@ public class QuestionAndAnswer : MonoBehaviour
 
     public void DisabledUI()
     {
-        CanvasGroup cg = GetComponent<CanvasGroup>();
         cg.alpha = 0;
         cg.blocksRaycasts = false;
         cg.interactable = false;
