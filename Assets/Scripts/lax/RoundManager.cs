@@ -1,16 +1,21 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using System;
 
 public class RoundManager : MonoBehaviour
 {
     public List<Round> round = new List<Round>();
-    public int nowIdx = 0;
-    // Use this for initialization
-    void Start()
-    {
 
+    public Action<int> endFunc;
+
+    private int nowIdx = 0;
+    MovableManager move;
+
+    private void Start()
+    {
+        move = gameObject.GetComponent<MovableManager>();
+        endFunc += selectGame;
+        this.initRound(nowIdx);
     }
 
     public void nextRound()
@@ -22,20 +27,24 @@ public class RoundManager : MonoBehaviour
     public void initRound(int idx)
     {
         // 初始化当前关卡的设置
-
+        move.Rounds = round[nowIdx].changeNum;
+        move.HatCount = round[nowIdx].hatNum;
         startGame();
     }
 
     public void startGame()
     {
         // 开始游戏
-        selectGame();
+        Debug.Log("开始游戏");
+        move.init(endFunc);
     }
 
-    public void selectGame()
+    public void selectGame(int idx)
     {
+        Dialogue talk = gameObject.GetComponent<Dialogue>();
+        talk.init();
         // 选择阶段
-        if (round[nowIdx].endType == "1")
+        if (round[nowIdx].endType == 1)
         {
             // 选择小球
         }

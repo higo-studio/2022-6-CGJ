@@ -23,10 +23,8 @@ public class MovableManagerEditor : Editor
 
     private MovableManager t;
     private GUIStyle labelStyle;
+    private bool isPreview;
 
-    private void Awake()
-    {
-    }
     private void OnEnable()
     {
         t = (MovableManager)target;
@@ -50,12 +48,15 @@ public class MovableManagerEditor : Editor
             DrawDefaultInspector();
             return;
         }
+
         var needRedraw = false;
         var needRefreshPos = false;
 
         var preEnabled = GUI.enabled;
         GUI.enabled = !DOTweenEditorPreview.isPreviewing;
+
         DrawDefaultInspector();
+
         if (GUIL.Button("Collect hats"))
         {
             t.CollectHats();
@@ -66,54 +67,62 @@ public class MovableManagerEditor : Editor
             t.SettleupHats();
             needRefreshPos = true;
         }
-        var max = t.Movables.Count - 1;
 
-        EditorGUI.BeginChangeCheck();
-        var newAIdx = EGUIL.IntSlider("Controll Point A", aIdx, 0, max);
-        if (newAIdx != bIdx)
+        isPreview = EGUIL.Toggle("Preview", isPreview);
+        if (isPreview)
         {
-            aIdx = newAIdx;
-        }
-        if (EditorGUI.EndChangeCheck() || needRefreshPos)
-        {
-            rawAPos = t.Movables[aIdx].position;
-            needRedraw = true;
-        }
+            var max = t.Movables.Count - 1;
 
-        EditorGUI.BeginChangeCheck();
-        var newBIdx = EGUIL.IntSlider("Controll Point B", bIdx, 0, max);
-        if (newBIdx != aIdx)
-        {
-            bIdx = newBIdx;
-        }
-        if (EditorGUI.EndChangeCheck() || needRefreshPos)
-        {
-            rawBPos = t.Movables[bIdx].position;
-            needRedraw = true;
+            EditorGUI.BeginChangeCheck();
+            var newAIdx = EGUIL.IntSlider("Controll Point A", aIdx, 0, max);
+            if (newAIdx != bIdx)
+            {
+                aIdx = newAIdx;
+            }
+            if (EditorGUI.EndChangeCheck() || needRefreshPos)
+            {
+                rawAPos = t.Movables[aIdx].position;
+                needRedraw = true;
+            }
+
+            EditorGUI.BeginChangeCheck();
+            var newBIdx = EGUIL.IntSlider("Controll Point B", bIdx, 0, max);
+            if (newBIdx != aIdx)
+            {
+                bIdx = newBIdx;
+            }
+            if (EditorGUI.EndChangeCheck() || needRefreshPos)
+            {
+                rawBPos = t.Movables[bIdx].position;
+                needRedraw = true;
+            }
         }
 
         GUI.enabled = preEnabled;
-        var btnStr = DOTweenEditorPreview.isPreviewing ? "Stop Preview Path" : "Start Preview Path";
-        if (GUIL.Button(btnStr))
-        {
-            if (!DOTweenEditorPreview.isPreviewing)
-            {
-                var (ta, tb) = t.CreateSwapAnimation(aIdx, bIdx);
-                var tween = t.Combine(ta, tb);
-                DOTweenEditorPreview.PrepareTweenForPreview(tween);
-                DOTweenEditorPreview.Start();
-            }
-            else
-            {
-                StopPreview();
-            }
-        }
-        if (needRedraw || needRefreshPos)
-        {
-            EditorWindow view = EditorWindow.GetWindow<SceneView>();
-            view.Repaint();
-        }
 
+        if (isPreview)
+        {
+            var btnStr = DOTweenEditorPreview.isPreviewing ? "Stop Preview Path" : "Start Preview Path";
+            if (GUIL.Button(btnStr))
+            {
+                if (!DOTweenEditorPreview.isPreviewing)
+                {
+                    var (ta, tb) = t.CreateSwapAnimation(aIdx, bIdx);
+                    var tween = t.Combine(ta, tb);
+                    DOTweenEditorPreview.PrepareTweenForPreview(tween);
+                    DOTweenEditorPreview.Start();
+                }
+                else
+                {
+                    StopPreview();
+                }
+            }
+            if (needRedraw || needRefreshPos)
+            {
+                EditorWindow view = EditorWindow.GetWindow<SceneView>();
+                view.Repaint();
+            }
+        }
     }
 
     void StopPreview()
@@ -123,7 +132,7 @@ public class MovableManagerEditor : Editor
 
     private void OnSceneGUI()
     {
-
+        if (!isPreview) return;
         if (labelStyle == null)
         {
             labelStyle = new GUIStyle();

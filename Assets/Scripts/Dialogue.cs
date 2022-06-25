@@ -20,7 +20,7 @@ public class DialogueItem
 
 public class Dialogue : MonoBehaviour
 {
-    public TMPro.TMP_Text Speaker;
+    public Text Speaker;
     public TextAsset Json;
     public float ShowWordsDuration = 2;
 
@@ -30,15 +30,15 @@ public class Dialogue : MonoBehaviour
     private float timer = 0;
     private int currIndex;
 
-    private void Awake()
-    {
 
-    }
-
-    void Start()
+    void start()
     {
         DisabledUI();
+        Debug.Log("设置不可见");
         // test
+    }
+
+    public void init() {
         Speak(Json);
     }
 
@@ -93,22 +93,16 @@ public class Dialogue : MonoBehaviour
 
     public void EnableUI()
     {
-        CanvasGroup cg = GetComponent<CanvasGroup>();
-        cg.alpha = 1;
-        cg.blocksRaycasts = true;
-        cg.interactable = true;
+        Speaker.gameObject.SetActive(true);
     }
 
     public void DisabledUI()
     {
-        CanvasGroup cg = GetComponent<CanvasGroup>();
-        cg.alpha = 0;
-        cg.blocksRaycasts = false;
-        cg.interactable = false;
+        Speaker.gameObject.SetActive(false);
     }
 
     public void ShowWords(string str)
     {
-        Speaker.SetText(str);
+        Speaker.text = str;
     }
 }
