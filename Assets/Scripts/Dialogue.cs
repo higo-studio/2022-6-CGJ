@@ -36,7 +36,6 @@ public class Dialogue : MonoBehaviour
         DisabledUI();
         Debug.Log("设置不可见");
         // test
-        init();
     }
 
     public void init() {

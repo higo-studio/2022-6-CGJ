@@ -49,14 +49,13 @@ public class QuestionAndAnswer : MonoBehaviour
         }
         else if(questionItem.type == 1)
         {
-            Debug.Log(questionItem.options.Length);
             buttons = new AnswerButton[questionItem.options.Length];
             int half = questionItem.options.Length / 2;
             // СЎПо
             for (int i = 0; i < questionItem.options.Length; i++)
             {
                 buttons[i] = Instantiate(buttonPrefab).GetComponent<AnswerButton>();
-                buttons[i].transform.SetParent(transform);
+                buttons[i].transform.SetParent(cg.gameObject.transform);
                 buttons[i].SetPositionByOffset(i - half);
                 buttons[i].Init(i, questionItem.options[i]);
             }
