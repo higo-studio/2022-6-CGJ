@@ -64,7 +64,11 @@ public class MovableManagerEditor : Editor
         var max = t.Movables.Count - 1;
 
         EditorGUI.BeginChangeCheck();
-        aIdx = EGUIL.IntSlider("Controll Point A", aIdx, 0, max);
+        var newAIdx = EGUIL.IntSlider("Controll Point A", aIdx, 0, max);
+        if (newAIdx != bIdx)
+        {
+            aIdx = newAIdx;
+        }
         if (EditorGUI.EndChangeCheck() || needRefreshPos)
         {
             rawAPos = t.Movables[aIdx].position;
@@ -72,7 +76,11 @@ public class MovableManagerEditor : Editor
         }
 
         EditorGUI.BeginChangeCheck();
-        bIdx = EGUIL.IntSlider("Controll Point B", bIdx, 0, max);
+        var newBIdx = EGUIL.IntSlider("Controll Point B", bIdx, 0, max);
+        if (newBIdx != aIdx)
+        {
+            bIdx = newBIdx;
+        }
         if (EditorGUI.EndChangeCheck() || needRefreshPos)
         {
             rawBPos = t.Movables[bIdx].position;
