@@ -77,6 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27adfd03057e4e84dac2922fc94fa0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AutoRun: 1
   Duration: 0.5
   Container: {fileID: 7370419349475157216}
   APoint:
@@ -180,7 +181,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  HatPrefab: {fileID: 919132149155446097, guid: e368eb58e54d14542b98a68ec30057f4, type: 3}
+  HatPrefab: {fileID: 5350794546372065633, guid: 1a2f51f73325c0943be3a98f3626032a, type: 3}
   HatCount: 8
   ParallelCount: 2
   Rounds: 20

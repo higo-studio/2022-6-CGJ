@@ -57,7 +57,6 @@ public class MovableManager : MonoBehaviour
     private int startIdx;
 
     private Action<int> end;
-    private int endIdx = 0;
 
     // Start is called before the first frame update
     public void init(Action<int> endFunc)
@@ -104,7 +103,9 @@ public class MovableManager : MonoBehaviour
         Container.DetachChildren();
         for (var i = 0; i < HatCount; i++)
         {
-            Movables.Add(Instantiate(HatPrefab, Container).transform);
+            var obj = Instantiate(HatPrefab, Container);
+            obj.GetComponent<Hat>().Index = i;
+            Movables.Add(obj.transform);
         }
     }
 
@@ -130,7 +131,7 @@ public class MovableManager : MonoBehaviour
         return (aT, bT);
     }
 
-    public Sequence CreatePutBallAnimation(int idx, int delay = 0)
+    public Sequence CreatePutBallAnimation(int idx, bool hasBall = true, int delay = 0)
     {
         var movable = Movables[idx];
         var seq = DOTween.Sequence();
@@ -138,10 +139,13 @@ public class MovableManager : MonoBehaviour
         var upSide = Vector3.up * 3;
         var rotSide = new Vector3(45, 0, 0);
 
-        var ballPos = movable.position;
-        ballPos.y = 0.5f;
-        Ball.position = ballPos;
-        Ball.gameObject.SetActive(true);
+        if (hasBall)
+        {
+            var ballPos = movable.position;
+            ballPos.y = 0.5f;
+            Ball.position = ballPos;
+            Ball.gameObject.SetActive(true);
+        }
         if (delay > 0)
         {
             seq.AppendInterval(delay);
@@ -151,7 +155,10 @@ public class MovableManager : MonoBehaviour
         seq.AppendInterval(2f);
         seq.Append(movable.DOBlendableLocalMoveBy(-upSide, 1f));
         seq.Join(movable.DOBlendableLocalRotateBy(-rotSide, 1f));
-        seq.AppendCallback(() => Ball.gameObject.SetActive(false));
+        if (hasBall)
+        {
+            seq.AppendCallback(() => Ball.gameObject.SetActive(false));
+        }
         return seq;
     }
 
@@ -168,7 +175,7 @@ public class MovableManager : MonoBehaviour
         Duration = Mathf.Lerp(0.2f, 1.5f, factor);
         if (swapTuples.Count < ParallelCount)
         {
-            end.Invoke(indexs.FirstIndex(val => val == startIdx));
+            end.Invoke(startIdx);
             return;
         }
 
@@ -195,6 +202,11 @@ public class MovableManager : MonoBehaviour
             indexs[aIdx] = indexs[bIdx];
             indexs[bIdx] = temp1;
         });
+    }
+
+    public int GetEndIndexFromStartIndex(int startIndex)
+    {
+        return indexs.FirstIndex(val => val == startIndex);
     }
 
     static (int, int)[] GetRandomInts(int count, int parallelCount)
