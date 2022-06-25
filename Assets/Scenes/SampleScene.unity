@@ -1008,9 +1008,9 @@ MonoBehaviour:
   Duration: 1.57
   Container: {fileID: 554206995}
   APoint:
-    value: {x: 6.247924, y: 0, z: 1.2079166}
+    value: {x: 4.845584, y: 0, z: -0.76136476}
   BPoint:
-    value: {x: -6.219625, y: 0, z: 2.8863719}
+    value: {x: -4.3312593, y: 0, z: 0.103037864}
   Movables:
   - {fileID: 661069968}
   - {fileID: 2065978772}

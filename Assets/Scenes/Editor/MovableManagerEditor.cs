@@ -45,6 +45,11 @@ public class MovableManagerEditor : Editor
     }
     public override void OnInspectorGUI()
     {
+        if (EditorApplication.isPlaying)
+        {
+            DrawDefaultInspector();
+            return;
+        }
         var needRedraw = false;
         var needRefreshPos = false;
 

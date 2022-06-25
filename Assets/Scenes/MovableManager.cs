@@ -14,14 +14,16 @@ public class RelativePoint
 
     public void Set(Vector3 point, Vector3 start, Vector3 end)
     {
-        var dir = (end - start).normalized;
+        var ray = end - start;
+        var dir = ray.normalized;
         var root = Matrix4x4.TRS(start, Quaternion.LookRotation(dir), Vector3.one);
         value = root.inverse.MultiplyPoint(point);
     }
 
     public Vector3 Get(Vector3 start, Vector3 end)
     {
-        var dir = (end - start).normalized;
+        var ray = end - start;
+        var dir = ray.normalized;
         var root = Matrix4x4.TRS(start, Quaternion.LookRotation(dir), Vector3.one);
         return root.MultiplyPoint(value);
     }
@@ -81,6 +83,19 @@ public class MovableManager : MonoBehaviour
         var seq = DOTween.Sequence();
         seq.Join(ta).Join(tb);
         return seq;
+    }
+
+    public Tween Swap(int aIdx, int bIdx)
+    {
+        var (ta, tb) = CreateSwapAnimation(aIdx, bIdx);
+        var t = Combine(ta, tb);
+        DOTween.Sequence().Append(t).AppendCallback(() =>
+        {
+            var temp = Movables[aIdx];
+            Movables[aIdx] = Movables[bIdx];
+            Movables[bIdx] = temp;
+        });
+        return t;
     }
 
     // Update is called once per frame
