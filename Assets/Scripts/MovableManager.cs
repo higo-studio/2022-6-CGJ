@@ -34,6 +34,7 @@ public class RelativePoint
 
 public class MovableManager : MonoBehaviour
 {
+    static System.Random Random = new System.Random();
     [Range(0.5f, 5)]
     public float Duration = 2f;
     public Transform Container;
@@ -42,17 +43,22 @@ public class MovableManager : MonoBehaviour
     [Header("Ô¤ÀÀÇø")]
     [ReadOnly]
     public List<Transform> Movables;
+    public Transform Ball;
 
     private Queue<(int, int)> swapTuples;
     // Start is called before the first frame update
     void Start()
     {
+        swapTuples = new Queue<(int, int)>();
         CollectHats();
         SettleupHats();
 
-        swapTuples = new Queue<(int, int)>();
-        Append((0, 1), (1, 6), (2, 6), (3, 5));
-        Next();
+        var ballIdx = Random.Next(0, Movables.Count);
+        for (var i = 0; i < 10; i++)
+        {
+            Append(GetTwoRandomInt(Movables.Count));
+        }
+        CreatePutBallAnimation(ballIdx).AppendCallback(() => Next());
     }
 
     void Append(params (int, int)[] tuples)
@@ -94,6 +100,27 @@ public class MovableManager : MonoBehaviour
         return (aT, bT);
     }
 
+    public Sequence CreatePutBallAnimation(int idx)
+    {
+        var movable = Movables[idx];
+        var seq = DOTween.Sequence();
+
+        var upSide = Vector3.up * 3;
+        var rotSide = new Vector3(45, 0, 0);
+
+        var ballPos = movable.position;
+        ballPos.y = 0.5f;
+        Ball.position = ballPos;
+        Ball.gameObject.SetActive(true);
+        seq.Append(movable.DOBlendableLocalMoveBy(upSide, 1f));
+        seq.Join(movable.DOBlendableLocalRotateBy(rotSide, 1f));
+        seq.AppendInterval(2f);
+        seq.Append(movable.DOBlendableLocalMoveBy(-upSide, 1f));
+        seq.Join(movable.DOBlendableLocalRotateBy(-rotSide, 1f));
+        seq.AppendCallback(() => Ball.gameObject.SetActive(false));
+        return seq;
+    }
+
     public Tween Combine(Tween ta, Tween tb)
     {
         var seq = DOTween.Sequence();
@@ -123,5 +150,31 @@ public class MovableManager : MonoBehaviour
             Movables[aIdx] = Movables[bIdx];
             Movables[bIdx] = temp;
         });
+    }
+
+    static (int, int) GetTwoRandomInt(int count)
+    {
+        var arr = new int[count];
+        for (var i = 0; i < count; i++)
+        {
+            arr[i] = i;
+        }
+        ShuffleCopy(arr);
+        return (arr[0], arr[count - 1]);
+    }
+
+    static T[] ShuffleCopy<T>(T[] arr)
+    {
+
+        for (var i = arr.Length - 1; i > 0; --i)
+        {
+            int randomIndex = Random.Next(i + 1);
+
+            T temp = arr[i];
+            arr[i] = arr[randomIndex];
+            arr[randomIndex] = temp;
+        }
+
+        return arr;
     }
 }
