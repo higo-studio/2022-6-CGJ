@@ -879,6 +879,7 @@ MonoBehaviour:
   CurrentEp: 1
   EpNum: 15
   EpPrefab: {fileID: 1524651568079818139, guid: 1e27478fd67074e6d98d6e145134fbdc, type: 3}
+  roundManager: {fileID: 0}
 --- !u!114 &986814904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1969,23 +1970,397 @@ MonoBehaviour:
   round:
   - ballColor: 0
     hatColor: 0
-    hatSpeed: 0
     changeNum: 1
     hatNum: 4
     endType: 0
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Json: {fileID: 0}
   - ballColor: 0
     hatColor: 0
-    hatSpeed: 0
-    changeNum: 1
+    changeNum: 4
     hatNum: 3
     endType: 0
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.5
+        inSlope: 0.5
+        outSlope: 0.5
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0.5
+        outSlope: 0.5
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
   - ballColor: 0
     hatColor: 0
-    hatSpeed: 0
-    changeNum: 1
+    changeNum: 6
+    hatNum: 3
+    endType: 0
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0.29999995
+        outSlope: 0.29999995
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1.3
+        inSlope: 0.29999995
+        outSlope: 0.29999995
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
+  - ballColor: 0
+    hatColor: 0
+    changeNum: 8
+    hatNum: 4
+    endType: 0
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0.29999995
+        outSlope: 0.29999995
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1.3
+        inSlope: 0.29999995
+        outSlope: 0.29999995
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
+  - ballColor: 1
+    hatColor: 0
+    changeNum: 8
+    hatNum: 4
+    endType: 1
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0.5
+        outSlope: 0.5
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1.5
+        inSlope: 0.5
+        outSlope: 0.5
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
+  - ballColor: 0
+    hatColor: 1
+    changeNum: 8
+    hatNum: 3
+    endType: 0
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: -0.49999997
+        outSlope: -0.49999997
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 0.8
+        inSlope: 0.08333336
+        outSlope: 0.08333336
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1.2
+        inSlope: 0.6666667
+        outSlope: 0.6666667
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
+  - ballColor: 1
+    hatColor: 2
+    changeNum: 8
     hatNum: 3
     endType: 1
-  selectUI: {fileID: 1154332705}
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.7
+        inSlope: 0.3
+        outSlope: 0.3
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0.3
+        outSlope: 0.3
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
+  - ballColor: 1
+    hatColor: 1
+    changeNum: 7
+    hatNum: 4
+    endType: 1
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.7
+        inSlope: 0.3
+        outSlope: 0.3
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0.3
+        outSlope: 0.3
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
+  - ballColor: 0
+    hatColor: 0
+    changeNum: 9
+    hatNum: 5
+    endType: 0
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.7
+        inSlope: 2.0945883
+        outSlope: 2.0945883
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.28645247
+        value: 1.3
+        inSlope: 0.7670045
+        outSlope: 0.7670045
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.9
+        inSlope: -0.5605793
+        outSlope: -0.5605793
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
+  - ballColor: 2
+    hatColor: 2
+    changeNum: 12
+    hatNum: 4
+    endType: 0
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.5
+        inSlope: 1.7232598
+        outSlope: 1.7232598
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.28535473
+        value: 0.99174035
+        inSlope: 0.24406236
+        outSlope: 0.24406236
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.60249686
+        value: 0.60002697
+        inSlope: -0.24024597
+        outSlope: -0.24024597
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.9
+        inSlope: 0.75464314
+        outSlope: 0.75464314
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
+  - ballColor: 1
+    hatColor: 0
+    changeNum: 9
+    hatNum: 10
+    endType: 0
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1.5
+        inSlope: -2.0000005
+        outSlope: -2.0000005
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.1
+        value: 1.3
+        inSlope: -2.5
+        outSlope: -2.5
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.2
+        value: 1
+        inSlope: -1.2499998
+        outSlope: -1.2499998
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.4
+        value: 1.1
+        inSlope: -0.19882679
+        outSlope: -0.19882679
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6940328
+        value: 0.8360604
+        inSlope: -0.34433922
+        outSlope: -0.34433922
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.9
+        inSlope: 0.20897524
+        outSlope: 0.20897524
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
+  selectUI: {fileID: 1447700123}
+  feature: {fileID: -298957434979495180, guid: a0394a0fb650a48fda8f4ef2b750cad3, type: 2}
+  raycaster: {fileID: 1154332706}
+  everything:
+    serializedVersion: 2
+    m_Bits: 2147483647
+  nothing:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &2087673278
 MonoBehaviour:
   m_ObjectHideFlags: 0

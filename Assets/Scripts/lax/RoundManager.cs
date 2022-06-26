@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Rendering.Universal;
 using System.Collections.Generic;
 using System;
 using System.Threading.Tasks;
@@ -14,11 +16,21 @@ public class RoundManager : MonoBehaviour
 
     private int nowIdx = 1;
     MovableManager move;
+    Dialogue talk;
+    QuestionAndAnswer qa;
+
+    public ScriptableRendererFeature feature;
+    public GraphicRaycaster raycaster;
+    public LayerMask everything;
+    public LayerMask nothing;
+
 
     private void Start()
     {
         selectUI.SetActive(false);
         move = gameObject.GetComponent<MovableManager>();
+        talk = gameObject.GetComponent<Dialogue>();
+        qa = gameObject.GetComponent<QuestionAndAnswer>();
         endFunc += selectGame;
         this.initRound(nowIdx);
     }
@@ -35,11 +47,15 @@ public class RoundManager : MonoBehaviour
         // 初始化当前关卡的设置
         move.Rounds = round[nowIdx].changeNum;
         move.HatCount = round[nowIdx].hatNum;
+        move.SpeedCurve = round[nowIdx].SpeedCurve;
+        talk.Json = round[nowIdx].Json;
+        qa.Json = round[nowIdx].Json;
         startGame();
     }
 
     public void startGame()
     {
+        selectUI.SetActive(false);
         // 开始游戏
         Debug.Log("开始游戏");
         move.init(endFunc);
@@ -48,12 +64,18 @@ public class RoundManager : MonoBehaviour
     private TaskCompletionSource<int> hatRayCastSource;
     public async void selectGame(int idx)
     {
+        talk.EnableUI();
         selectUI.SetActive(true);
         // 选择阶段
         if (round[nowIdx].endType == RoundEndType.SelectBall)
         {
             Dialogue talk = gameObject.GetComponent<Dialogue>();
+            talk.Speaker.text = "那么，小球在哪顶帽子里面呢？";
             // 选择小球
+
+            feature.SetActive(true);
+            raycaster.blockingMask = nothing;
+
             hatRayCastSource = new TaskCompletionSource<int>();
             var hitIdx = await hatRayCastSource.Task;
 
@@ -62,7 +84,9 @@ public class RoundManager : MonoBehaviour
             {
                 int result = isCorret ? 1 : 0;
                 if (EventsCenter.EndDialogue != null)
-                    EventsCenter.EndDialogue(this, new WrongOrRight(1));
+                    EventsCenter.EndDialogue(this, new WrongOrRight(result));
+                feature.SetActive(false);
+                raycaster.blockingMask = everything;
 
             });
             Debug.Log("下一关");
@@ -89,8 +113,16 @@ public class RoundManager : MonoBehaviour
         }
     }
 
-    public void endGame()
+    public void endGame(bool success)
     {
+
+        if (!success)
+        {
+            Debug.Log("失败了，重来");
+            startGame();
+            return;
+        }
+
         // 结束阶段
         if(round.Count> nowIdx+1)
         {
