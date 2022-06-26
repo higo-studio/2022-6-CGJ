@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4162220615133996873}
   - component: {fileID: 4162220615133996875}
   - component: {fileID: 4162220615133996874}
-  - component: {fileID: 7932098894942345933}
-  - component: {fileID: 3956836857276395206}
+  - component: {fileID: -1470291964529867826}
+  - component: {fileID: 3910867611528018598}
   m_Layer: 3
-  m_Name: Green
+  m_Name: White
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a5795ea0d583d4355b3b8fbde4ac08c3, type: 2}
-  - {fileID: 2100000, guid: 4a952963b0e0a47939ba9ce74dc12d1b, type: 2}
+  - {fileID: 2100000, guid: 3fe70acc7032bdd48a3c3dd40f8e7a8e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,7 +86,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7932098894942345933
+--- !u!114 &-1470291964529867826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Index: 0
---- !u!65 &3956836857276395206
+--- !u!65 &3910867611528018598
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
