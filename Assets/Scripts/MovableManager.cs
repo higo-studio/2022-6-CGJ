@@ -137,7 +137,7 @@ public class MovableManager : MonoBehaviour
         var movable = Movables[idx];
         var seq = DOTween.Sequence();
 
-        var upSide = Vector3.up * 3;
+        var upSide = new Vector3(0, 3, 1);
         var rotSide = new Vector3(45, 0, 0);
 
         if (hasBall)
@@ -151,8 +151,8 @@ public class MovableManager : MonoBehaviour
         {
             seq.AppendInterval(delay);
         }
-        seq.Append(movable.DOBlendableLocalMoveBy(upSide, 1f));
-        seq.Join(movable.DOBlendableLocalRotateBy(rotSide, 1f));
+        seq.Append(movable.DOBlendableLocalMoveBy(upSide, 0.7f).SetEase(Ease.InOutBack).SetDelay(0.2f));
+        seq.Join(movable.DOBlendableLocalRotateBy(rotSide, 0.7f));
         seq.AppendInterval(2f);
         seq.Append(movable.DOBlendableLocalMoveBy(-upSide, 1f));
         seq.Join(movable.DOBlendableLocalRotateBy(-rotSide, 1f));
