@@ -1969,22 +1969,62 @@ MonoBehaviour:
   round:
   - ballColor: 0
     hatColor: 0
-    hatSpeed: 0
     changeNum: 1
     hatNum: 4
     endType: 0
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
   - ballColor: 0
     hatColor: 0
-    hatSpeed: 0
-    changeNum: 1
-    hatNum: 3
-    endType: 0
-  - ballColor: 0
-    hatColor: 0
-    hatSpeed: 0
-    changeNum: 1
+    changeNum: 10
     hatNum: 3
     endType: 1
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.32387435
+        value: 0.32387435
+        inSlope: 10.086525
+        outSlope: 10.086525
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.34344944
+        value: 0.69918853
+        inSlope: 9.81561
+        outSlope: 9.81561
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0.45816958
+        outSlope: 0.45816958
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
   selectUI: {fileID: 1154332705}
 --- !u!114 &2087673278
 MonoBehaviour:
