@@ -14,16 +14,31 @@
         }
     ],
 
-    "endItems": [
+    "rightItems": [
         {
             "speaker": "",
-            "content": "球在哪",
+            "content": "哎呦",
             "menuText": "",
             "linkTo": []
         },
         {
             "speaker": "",
-            "content": "球在哪里呀~",
+            "content": "给你蒙对了嗷",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+
+    "wrongItems": [
+        {
+            "speaker": "",
+            "content": "笑嘻咯",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "不会有人眼瞎吧",
             "menuText": "",
             "linkTo": [-1]
         }
@@ -32,6 +47,7 @@
     "question": {
         "type": 1,
         "question": "球在哪",
-        "options": ["嗨嗨嗨", "来了嗷", "老干妈"]
+        "options": ["嗨嗨嗨", "来了嗷", "老干妈"],
+        "anwser" : 2
     }
 }

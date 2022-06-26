@@ -16,6 +16,7 @@ public class QuestionItem
     public int type;
     public string question;
     public string[] options;
+    public int answer;
 }
 
 public class QuestionAndAnswer : MonoBehaviour
@@ -89,7 +90,12 @@ public class QuestionAndAnswer : MonoBehaviour
     public void OnMakeAnswer(object sender, EventArgs answerIndex)
     {
         DisabledUI();
+        int result;
+        if (questionItem.answer != ((AnswerArg)answerIndex).answer)
+            result = 0;
+        else
+            result = 1;
         if(EventsCenter.EndDialogue != null)
-            EventsCenter.EndDialogue(this, new EventArgs());
+            EventsCenter.EndDialogue(this, new WrongOrRight(result));
     }
 }
