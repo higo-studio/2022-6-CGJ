@@ -1,0 +1,53 @@
+{
+    "startItems":[
+        {
+            "speaker": "",
+            "content": "这次帽子增加到4个，别被吓坏了",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "开始吧",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+
+    "rightItems": [
+        {
+            "speaker": "",
+            "content": "看来没有吓到你",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "夜还很长，继续吧",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+
+    "wrongItems": [
+        {
+            "speaker": "",
+            "content": "哟呵",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "只是多了1个帽子就不会了？",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+    
+    "question": {
+        "type": 0,
+        "question": "好了，那么球在哪个帽子？",
+        "options": [],
+        "answer" : -1
+    }
+}

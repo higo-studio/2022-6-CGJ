@@ -1,0 +1,47 @@
+{
+    "startItems":[
+        {
+            "speaker": "",
+            "content": "这次我要加快节奏咯",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+
+    "rightItems": [
+        {
+            "speaker": "",
+            "content": "真不错",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "或许还是太简单了，再来",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+
+    "wrongItems": [
+        {
+            "speaker": "",
+            "content": "呵呵，也不过如此嘛",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "看来刚刚是凑巧蒙对罢了",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+    
+    "question": {
+        "type": 0,
+        "question": "好了，那么球在哪个帽子？",
+        "options": [],
+        "answer" : -1
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "startItems":[
+        {
+            "speaker": "",
+            "content": "又...哎算了，让准备道具的别来上班了",
+            "menuText": "",
+            "linkTo": []
+        }, {
+            "speaker": "",
+            "content": "别在意，继续，这次少了一个帽子",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "我得加快速度，不然太简单了",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+
+    "rightItems": [
+        {
+            "speaker": "",
+            "content": "额...我只是觉得不能浪费新道具",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "这有点太简单了",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "再来再来",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+
+    "wrongItems": [
+        {
+            "speaker": "",
+            "content": "是不是看错题目了？",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+    
+    "question": {
+        "type": 1,
+        "question": "帽子上的带子是什么颜色？",
+        "options": ["蓝色", "红色", "绿色"],
+        "answer" : 3
+    }
+}

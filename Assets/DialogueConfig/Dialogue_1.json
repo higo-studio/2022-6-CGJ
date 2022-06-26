@@ -1,0 +1,71 @@
+{
+    "startItems":[
+        {
+            "speaker": "",
+            "content": "嘿嘿嘿，欢迎!",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "欢迎来到魔术秀",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "我会把球藏在帽子里并打乱顺序",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "来猜猜球会在哪个帽子？",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "看好了，千万别眨眼",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+
+    "rightItems": [
+        {
+            "speaker": "",
+            "content": "真不错",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "比较简单，接下来该增加难度咯",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+
+    "wrongItems": [
+        {
+            "speaker": "",
+            "content": "哈哈哈",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "这么简单都猜错吗",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+    
+    "question": {
+        "type": 0,
+        "question": "好了，那么球在哪个帽子？",
+        "options": [],
+        "answer" : -1
+    }
+}

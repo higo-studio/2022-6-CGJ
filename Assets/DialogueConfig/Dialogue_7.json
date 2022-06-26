@@ -1,0 +1,47 @@
+{
+    "startItems":[
+        {
+            "speaker": "",
+            "content": "这次我把所有道具换回来了",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "开始咯",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+
+    "rightItems": [
+        {
+            "speaker": "",
+            "content": "（傻眼）...",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "这你也能猜对，蒙的吧",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+
+    "wrongItems": [
+        {
+            "speaker": "",
+            "content": "哈哈哈哈哈，没想到吧",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+    
+    "question": {
+        "type": 1,
+        "question": "帽子一共转换了几次",
+        "options": ["7", "10", "12"],
+        "answer" : 2
+    }
+}
