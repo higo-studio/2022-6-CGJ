@@ -54,6 +54,6 @@
         "type": 1,
         "question": "帽子一共转换了几次",
         "options": ["7", "10", "12"],
-        "answer" : 2
+        "answer" : 1
     }
 }
