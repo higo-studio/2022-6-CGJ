@@ -26,6 +26,8 @@ public class RoundManager : MonoBehaviour
     public LayerMask everything;
     public LayerMask nothing;
 
+    public UIEpisode episode;
+
 
     private void Start()
     {
@@ -42,6 +44,7 @@ public class RoundManager : MonoBehaviour
         selectUI.SetActive(false);
         nowIdx++;
         this.initRound(nowIdx);
+        episode.NextEp();
     }
 
     public void initRound(int idx)
