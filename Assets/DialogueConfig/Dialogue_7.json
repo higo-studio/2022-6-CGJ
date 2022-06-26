@@ -2,13 +2,7 @@
     "startItems":[
         {
             "speaker": "",
-            "content": "这次我把所有道具换回来了",
-            "menuText": "",
-            "linkTo": []
-        },
-        {
-            "speaker": "",
-            "content": "开始咯",
+            "content": "看这里————",
             "menuText": "",
             "linkTo": [-1]
         }
