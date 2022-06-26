@@ -16,7 +16,7 @@ public class RoundManager : MonoBehaviour
 
     public Transform tallUI;
 
-    private int nowIdx = 4;
+    private int nowIdx = 1;
     MovableManager move;
     Dialogue talk;
     QuestionAndAnswer qa;
