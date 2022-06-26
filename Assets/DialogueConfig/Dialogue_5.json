@@ -3,7 +3,7 @@
         
         {
             "speaker": "",
-            "content": "开始吧",
+            "content": "注意看咯",
             "menuText": "",
             "linkTo": [-1]
         }
@@ -12,36 +12,13 @@
     "rightItems": [
         {
             "speaker": "",
-            "content": "你看，很正常吧",
-            "menuText": "",
-            "linkTo": []
-        },
-        {
-            "speaker": "",
-            "content": "恶作剧第二次就没意思了，这帮人就是不听",
-            "menuText": "",
-            "linkTo": []
-        },
-        {
-            "speaker": "",
-            "content": "总之，恭喜你答对这题",
+            "content": "可以可以",
             "menuText": "",
             "linkTo": []
         },
         {
             "speaker": "",
             "content": "[下一关]",
-            "menuText": "",
-            "linkTo": []
-        },
-        {
-            "speaker": "",
-            "content": "又...哎算了，让准备道具的别来上班了",
-            "menuText": "",
-            "linkTo": []
-        }, {
-            "speaker": "",
-            "content": "别在意，继续",
             "menuText": "",
             "linkTo": [-1]
         }

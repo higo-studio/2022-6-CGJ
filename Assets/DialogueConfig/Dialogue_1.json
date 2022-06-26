@@ -35,13 +35,13 @@
     "rightItems": [
         {
             "speaker": "",
-            "content": "真不错",
+            "content": "不错",
             "menuText": "",
             "linkTo": []
         },
         {
             "speaker": "",
-            "content": "比较简单，接下来该增加难度咯",
+            "content": "接下来该增加难度咯",
             "menuText": "",
             "linkTo": []
         },
@@ -56,13 +56,13 @@
     "wrongItems": [
         {
             "speaker": "",
-            "content": "哈哈哈",
+            "content": "额",
             "menuText": "",
             "linkTo": []
         },
         {
             "speaker": "",
-            "content": "这么简单都猜错吗",
+            "content": "能不能认真点",
             "menuText": "",
             "linkTo": []
         },

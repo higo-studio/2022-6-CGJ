@@ -17,24 +17,19 @@
         },
         {
             "speaker": "",
-            "content": "小恶作剧，不要在意，继续",
+            "content": "这都被你注意到了",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "那么，继续吧",
             "menuText": "",
             "linkTo": []
         },
         {
             "speaker": "",
             "content": "[下一关]",
-            "menuText": "",
-            "linkTo": []
-        },
-        {
-            "speaker": "",
-            "content": "又拿错了，这帮人真的是...",
-            "menuText": "",
-            "linkTo": []
-        }, {
-            "speaker": "",
-            "content": "额...这次是真的不是我吩咐的",
             "menuText": "",
             "linkTo": [-1]
         }
@@ -43,13 +38,13 @@
     "wrongItems": [
         {
             "speaker": "",
-            "content": "哇咔咔",
+            "content": "咳咳",
             "menuText": "",
             "linkTo": []
         },
         {
             "speaker": "",
-            "content": "不会以为真拿错吧",
+            "content": "听清楚我问的是啥",
             "menuText": "",
             "linkTo": []
         },
