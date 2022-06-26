@@ -56,6 +56,7 @@ public class RoundManager : MonoBehaviour
         move.SpeedCurve = round[nowIdx].SpeedCurve;
         move.HatPrefab = round[nowIdx].HatPrefab;
         move.ballIdx = round[nowIdx].ballColor;
+        move.ParallelCount = round[nowIdx].parallelNum;
         talk.Json = round[nowIdx].Json;
         qa.Json = round[nowIdx].Json;
         selectUI.SetActive(true);

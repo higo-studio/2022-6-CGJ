@@ -37,6 +37,7 @@ public class UIEpisode : MonoBehaviour
 
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(UIEpisode))]
 public class UIEpEditor : Editor
 {
@@ -50,5 +51,5 @@ public class UIEpEditor : Editor
         }
     }
 }
-
+#endif
 
