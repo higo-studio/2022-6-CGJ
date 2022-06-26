@@ -180,7 +180,7 @@ public class MovableManager : MonoBehaviour
     public void Next()
     {
         var factor = SpeedCurve.Evaluate((float)++currentRound / Rounds);
-        Duration = Mathf.Lerp(0.2f, 1.5f, factor);
+        Duration = Mathf.Lerp(0.2f, 1.5f, factor) / 3f;
         if (swapTuples.Count < ParallelCount)
         {
             end.Invoke(startIdx);
