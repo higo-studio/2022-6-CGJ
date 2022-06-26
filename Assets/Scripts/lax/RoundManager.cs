@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System;
 using System.Threading.Tasks;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class RoundManager : MonoBehaviour
 {
@@ -145,7 +146,7 @@ public class RoundManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("πßœ≤ƒ„Õ®πÿ¿≤");
+            SceneManager.LoadScene("Start");
         }
     }
 }

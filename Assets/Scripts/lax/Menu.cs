@@ -18,4 +18,13 @@ public class Menu : MonoBehaviour
         feature.SetActive(false);
         SceneManager.LoadScene("Game");       
     }
+
+    public void onClickExit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.ExitPlaymode();
+#else
+        Application.Quit();
+#endif
+    }
 }
