@@ -52,7 +52,7 @@
     "question": {
         "type": 1,
         "question": "那么，问题是...球是什么颜色？",
-        "options": ["蓝色", "红色", "绿色"],
+        "options": ["蓝", "绿", "红"],
         "answer" : 2
     }
 }

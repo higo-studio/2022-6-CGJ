@@ -52,7 +52,7 @@
     "question": {
         "type": 1,
         "question": "帽子上的带子是什么颜色？",
-        "options": ["蓝色", "红色", "绿色"],
+        "options": ["蓝", "绿", "红"],
         "answer" : 3
     }
 }

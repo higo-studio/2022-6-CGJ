@@ -1969,7 +1969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   round:
   - ballColor: 0
-    hatColor: 0
+    HatPrefab: {fileID: 0}
     changeNum: 1
     hatNum: 4
     endType: 0
@@ -1981,7 +1981,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     Json: {fileID: 0}
   - ballColor: 0
-    hatColor: 0
+    HatPrefab: {fileID: 5350794546372065633, guid: 2480e4ae485b08f438308df59a788896, type: 3}
     changeNum: 4
     hatNum: 3
     endType: 0
@@ -2011,7 +2011,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     Json: {fileID: 4900000, guid: 8a72a4afab62d00458149c04196fecc2, type: 3}
   - ballColor: 0
-    hatColor: 0
+    HatPrefab: {fileID: 5350794546372065633, guid: 2480e4ae485b08f438308df59a788896, type: 3}
     changeNum: 6
     hatNum: 3
     endType: 0
@@ -2041,7 +2041,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     Json: {fileID: 4900000, guid: dd53bf37f17a57041b5122f23af790eb, type: 3}
   - ballColor: 0
-    hatColor: 0
+    HatPrefab: {fileID: 5350794546372065633, guid: 2480e4ae485b08f438308df59a788896, type: 3}
     changeNum: 8
     hatNum: 4
     endType: 0
@@ -2071,7 +2071,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     Json: {fileID: 4900000, guid: 86ce9ed122e81154b988f22ee5f2cfe1, type: 3}
   - ballColor: 1
-    hatColor: 0
+    HatPrefab: {fileID: 5350794546372065633, guid: 2480e4ae485b08f438308df59a788896, type: 3}
     changeNum: 8
     hatNum: 4
     endType: 1
@@ -2101,7 +2101,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     Json: {fileID: 4900000, guid: ca5821d71ffc5b6428dc5ed40c63efb4, type: 3}
   - ballColor: 1
-    hatColor: 1
+    HatPrefab: {fileID: 5350794546372065633, guid: 4446def0848b722448ee2506d2216282, type: 3}
     changeNum: 8
     hatNum: 4
     endType: 0
@@ -2140,7 +2140,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     Json: {fileID: 4900000, guid: 7d4e637395c24bc41ae6f90287a42bd1, type: 3}
   - ballColor: 1
-    hatColor: 2
+    HatPrefab: {fileID: 5350794546372065633, guid: 4446def0848b722448ee2506d2216282, type: 3}
     changeNum: 8
     hatNum: 3
     endType: 1
@@ -2188,7 +2188,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     Json: {fileID: 4900000, guid: 825b40f681d3325418518d350ec1863a, type: 3}
   - ballColor: 0
-    hatColor: 0
+    HatPrefab: {fileID: 5350794546372065633, guid: 2480e4ae485b08f438308df59a788896, type: 3}
     changeNum: 10
     hatNum: 3
     endType: 1
@@ -2218,7 +2218,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     Json: {fileID: 4900000, guid: 4047c209ab4bd3f4b9625e85b71b0c81, type: 3}
   - ballColor: 2
-    hatColor: 1
+    HatPrefab: {fileID: 5350794546372065633, guid: 3e3f384a7cbf91f4f8e7082dcddcdd5c, type: 3}
     changeNum: 10
     hatNum: 10
     endType: 0
