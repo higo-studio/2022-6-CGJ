@@ -50,7 +50,8 @@ public class RoundManager : MonoBehaviour
     {
         selectUI.SetActive(true);
         Dialogue talk = gameObject.GetComponent<Dialogue>();
-        talk.init();
+        if (EventsCenter.AskQuestion != null) { }
+            EventsCenter.AskQuestion.Invoke(this, new EventArgs());
         // Ñ¡Ôñ½×¶Î
         if (round[nowIdx].endType == RoundEndType.SelectBall)
         {
