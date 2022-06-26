@@ -43,7 +43,7 @@ public class QuestionAndAnswer : MonoBehaviour
         ShowQuestion();
         if (questionItem.type == 0)
         {
-            // 选小球
+            // 选小锟斤拷
             if (EventsCenter.ChooseHat != null)
                 EventsCenter.ChooseHat.Invoke(this, new EventArgs());
         }
@@ -51,11 +51,10 @@ public class QuestionAndAnswer : MonoBehaviour
         {
             buttons = new AnswerButton[questionItem.options.Length];
             int half = questionItem.options.Length / 2;
-            // 选项
+            // 选锟斤拷
             for (int i = 0; i < questionItem.options.Length; i++)
             {
-                buttons[i] = Instantiate(buttonPrefab).GetComponent<AnswerButton>();
-                buttons[i].transform.SetParent(cg.gameObject.transform);
+                buttons[i] = Instantiate(buttonPrefab, cg.gameObject.transform).GetComponent<AnswerButton>();
                 buttons[i].SetPositionByOffset(i - half);
                 buttons[i].Init(i, questionItem.options[i]);
             }
