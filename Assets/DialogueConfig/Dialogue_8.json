@@ -41,7 +41,7 @@
     "question": {
         "type": 1,
         "question": "正面朝上的扑克牌有多少张？",
-        "options": ["4,8,11"],
+        "options": ["4", "8", "10"],
         "answer" : 1
     }
 }
