@@ -26,6 +26,10 @@ public class Round
     [Range(3, 10)]
     public int hatNum;
 
+    [SerializeField]
+    [Range(1, 5)]
+    public int parallelNum = 1;
+
     // 结局类型：选小球还是输入,1为选小球，2为输入
     [SerializeField]
     public RoundEndType endType;

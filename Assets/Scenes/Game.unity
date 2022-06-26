@@ -2164,6 +2164,7 @@ MonoBehaviour:
     HatPrefab: {fileID: 0}
     changeNum: 1
     hatNum: 4
+    parallelNum: 1
     endType: 0
     SpeedCurve:
       serializedVersion: 2
@@ -2176,6 +2177,7 @@ MonoBehaviour:
     HatPrefab: {fileID: 5350794546372065633, guid: 2480e4ae485b08f438308df59a788896, type: 3}
     changeNum: 4
     hatNum: 3
+    parallelNum: 1
     endType: 0
     SpeedCurve:
       serializedVersion: 2
@@ -2206,6 +2208,7 @@ MonoBehaviour:
     HatPrefab: {fileID: 5350794546372065633, guid: 2480e4ae485b08f438308df59a788896, type: 3}
     changeNum: 6
     hatNum: 3
+    parallelNum: 1
     endType: 0
     SpeedCurve:
       serializedVersion: 2
@@ -2236,6 +2239,7 @@ MonoBehaviour:
     HatPrefab: {fileID: 5350794546372065633, guid: 2480e4ae485b08f438308df59a788896, type: 3}
     changeNum: 8
     hatNum: 4
+    parallelNum: 1
     endType: 0
     SpeedCurve:
       serializedVersion: 2
@@ -2266,6 +2270,7 @@ MonoBehaviour:
     HatPrefab: {fileID: 5350794546372065633, guid: 3e3f384a7cbf91f4f8e7082dcddcdd5c, type: 3}
     changeNum: 8
     hatNum: 4
+    parallelNum: 1
     endType: 1
     SpeedCurve:
       serializedVersion: 2
@@ -2323,6 +2328,7 @@ MonoBehaviour:
     HatPrefab: {fileID: 5350794546372065633, guid: 3e3f384a7cbf91f4f8e7082dcddcdd5c, type: 3}
     changeNum: 8
     hatNum: 4
+    parallelNum: 1
     endType: 0
     SpeedCurve:
       serializedVersion: 2
@@ -2380,6 +2386,7 @@ MonoBehaviour:
     HatPrefab: {fileID: 5350794546372065633, guid: 4446def0848b722448ee2506d2216282, type: 3}
     changeNum: 8
     hatNum: 3
+    parallelNum: 1
     endType: 1
     SpeedCurve:
       serializedVersion: 2
@@ -2437,6 +2444,7 @@ MonoBehaviour:
     HatPrefab: {fileID: 5350794546372065633, guid: 2480e4ae485b08f438308df59a788896, type: 3}
     changeNum: 10
     hatNum: 3
+    parallelNum: 1
     endType: 1
     SpeedCurve:
       serializedVersion: 2
@@ -2494,6 +2502,7 @@ MonoBehaviour:
     HatPrefab: {fileID: 5350794546372065633, guid: 2480e4ae485b08f438308df59a788896, type: 3}
     changeNum: 10
     hatNum: 3
+    parallelNum: 1
     endType: 1
     SpeedCurve:
       serializedVersion: 2
@@ -2551,6 +2560,7 @@ MonoBehaviour:
     HatPrefab: {fileID: 5350794546372065633, guid: 3e3f384a7cbf91f4f8e7082dcddcdd5c, type: 3}
     changeNum: 12
     hatNum: 10
+    parallelNum: 2
     endType: 0
     SpeedCurve:
       serializedVersion: 2
