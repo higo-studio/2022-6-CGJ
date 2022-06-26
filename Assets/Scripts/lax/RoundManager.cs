@@ -63,6 +63,7 @@ public class RoundManager : MonoBehaviour
     private TaskCompletionSource<int> hatRayCastSource;
     public async void selectGame(int idx)
     {
+        talk.EnableUI();
         selectUI.SetActive(true);
         // Ñ¡Ôñ½×¶Î
         if (round[nowIdx].endType == RoundEndType.SelectBall)
