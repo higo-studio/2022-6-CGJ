@@ -1,0 +1,65 @@
+{
+    "startItems":[
+        {
+            "speaker": "",
+            "content": "摊牌了，不装了",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "我今晚就是要整你，开始！",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+
+    "rightItems": [
+        {
+            "speaker": "",
+            "content": "这...也能猜对...",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "是在下输了...",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "感谢你的参与，再会！",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "[结束]",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+
+    "wrongItems": [
+        {
+            "speaker": "",
+            "content": "怎样，猜不到吧，很蓝的啦",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "[重来]",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+    
+    "question": {
+        "type": 0,
+        "question": "球在哪？",
+        "options": [],
+        "answer" : -1
+    }
+}
