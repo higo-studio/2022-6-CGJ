@@ -90,5 +90,7 @@ public class QuestionAndAnswer : MonoBehaviour
     public void OnMakeAnswer(object sender, EventArgs answerIndex)
     {
         DisabledUI();
+        if(EventsCenter.EndDialogue != null)
+            EventsCenter.EndDialogue(this, new EventArgs());
     }
 }
