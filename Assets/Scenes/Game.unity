@@ -1890,6 +1890,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    Json: {fileID: 0}
   - ballColor: 0
     hatColor: 0
     changeNum: 3
@@ -1897,10 +1898,29 @@ MonoBehaviour:
     endType: 0
     SpeedCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
   - ballColor: 0
     hatColor: 0
     changeNum: 3
@@ -1908,10 +1928,29 @@ MonoBehaviour:
     endType: 0
     SpeedCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
   - ballColor: 0
     hatColor: 0
     changeNum: 3
@@ -1919,10 +1958,29 @@ MonoBehaviour:
     endType: 0
     SpeedCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 1
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
   selectUI: {fileID: 1447700123}
   feature: {fileID: -298957434979495180, guid: a0394a0fb650a48fda8f4ef2b750cad3, type: 2}
   raycaster: {fileID: 1154332706}

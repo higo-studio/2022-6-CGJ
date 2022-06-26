@@ -69,6 +69,7 @@ public class RoundManager : MonoBehaviour
         if (round[nowIdx].endType == RoundEndType.SelectBall)
         {
             Dialogue talk = gameObject.GetComponent<Dialogue>();
+            talk.Speaker.text = "那么，小球在哪顶帽子里面呢？";
             // 选择小球
 
             feature.SetActive(true);
