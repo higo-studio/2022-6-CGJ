@@ -2262,8 +2262,8 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     Json: {fileID: 4900000, guid: 86ce9ed122e81154b988f22ee5f2cfe1, type: 3}
-  - ballColor: 2
-    HatPrefab: {fileID: 5350794546372065633, guid: 2480e4ae485b08f438308df59a788896, type: 3}
+  - ballColor: 0
+    HatPrefab: {fileID: 5350794546372065633, guid: 3e3f384a7cbf91f4f8e7082dcddcdd5c, type: 3}
     changeNum: 8
     hatNum: 4
     endType: 1
@@ -2490,6 +2490,63 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     Json: {fileID: 4900000, guid: 4047c209ab4bd3f4b9625e85b71b0c81, type: 3}
+  - ballColor: 0
+    HatPrefab: {fileID: 5350794546372065633, guid: 2480e4ae485b08f438308df59a788896, type: 3}
+    changeNum: 10
+    hatNum: 3
+    endType: 1
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.4
+        inSlope: 0.8000001
+        outSlope: 0.8000001
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.25
+        value: 0.6
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.5
+        value: 0.4
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.75
+        value: 0.6
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.4
+        inSlope: -0.8000001
+        outSlope: -0.8000001
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Json: {fileID: 4900000, guid: 4757d6023147a75469fbfef0d6718d02, type: 3}
   - ballColor: 3
     HatPrefab: {fileID: 5350794546372065633, guid: 3e3f384a7cbf91f4f8e7082dcddcdd5c, type: 3}
     changeNum: 12
@@ -2546,7 +2603,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    Json: {fileID: 4900000, guid: 4757d6023147a75469fbfef0d6718d02, type: 3}
+    Json: {fileID: 4900000, guid: 1d8d38ccc06937144bc31645be8e8476, type: 3}
   selectUI: {fileID: 1447700123}
   tallUI: {fileID: 124366080}
   feature: {fileID: -298957434979495180, guid: a0394a0fb650a48fda8f4ef2b750cad3, type: 2}
