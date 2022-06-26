@@ -9,11 +9,12 @@ public class UIEpisode : MonoBehaviour
     public int CurrentEp = 1;
     public int EpNum = 15;
     public GameObject EpPrefab;
+    public RoundManager roundManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < EpNum; i++)
+        for (int i = 0; i < roundManager.round.Count-1; i++)//第0关有bug所以-1
         {
             Instantiate(EpPrefab, transform);
         }
