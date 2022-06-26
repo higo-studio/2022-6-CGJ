@@ -80,9 +80,8 @@ public class RoundManager : MonoBehaviour
             move.CreatePutBallAnimation(move.GetEndIndexFromStartIndex(hitIdx), isCorret).AppendCallback(() =>
             {
                 int result = isCorret ? 1 : 0;
-                Debug.Log(result);
                 if (EventsCenter.EndDialogue != null)
-                    EventsCenter.EndDialogue(this, new WrongOrRight(1));
+                    EventsCenter.EndDialogue(this, new WrongOrRight(result));
                 feature.SetActive(false);
                 raycaster.blockingMask = everything;
 
