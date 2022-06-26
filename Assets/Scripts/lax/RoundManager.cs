@@ -55,6 +55,7 @@ public class RoundManager : MonoBehaviour
 
     public void startGame()
     {
+        selectUI.SetActive(false);
         // 开始游戏
         Debug.Log("开始游戏");
         move.init(endFunc);
@@ -112,8 +113,16 @@ public class RoundManager : MonoBehaviour
         }
     }
 
-    public void endGame()
+    public void endGame(bool success)
     {
+
+        if (!success)
+        {
+            Debug.Log("失败了，重来");
+            startGame();
+            return;
+        }
+
         // 结束阶段
         if(round.Count> nowIdx+1)
         {

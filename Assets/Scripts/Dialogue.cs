@@ -124,9 +124,12 @@ public class Dialogue : MonoBehaviour
             if (EventsCenter.StartMove != null)
                 EventsCenter.StartMove.Invoke(this, new EventArgs());
         }
-        if (typeId != 0)
+        if (typeId == 1)
         {
-            gameObject.GetComponent<RoundManager>().endGame();
+            gameObject.GetComponent<RoundManager>().endGame(false);
+        }else if(typeId == 2)
+        {
+            gameObject.GetComponent<RoundManager>().endGame(true);
         }
     }
 
