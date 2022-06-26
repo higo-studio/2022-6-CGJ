@@ -44,6 +44,8 @@ public class Dialogue : MonoBehaviour
     private int currIndex;
     private int dialogueType;
 
+    public int typeId = 0;
+
     private void Awake()
     {
         EventsCenter.StarterDialogue += OnStarterDialouge;
@@ -63,7 +65,8 @@ public class Dialogue : MonoBehaviour
     // type : 0 = ¿ªÊ¼      1 = ´í      2 = ¶Ô
     void SetJson(TextAsset jsonAseet, int type)
     {
-        if(type == 0)
+        typeId = type;
+        if (type == 0)
         {
             items = JsonUtility.FromJson<StartJsonArrayWrap<DialogueItem>>(Json.text).startItems;
         }
@@ -120,6 +123,10 @@ public class Dialogue : MonoBehaviour
         {
             if (EventsCenter.StartMove != null)
                 EventsCenter.StartMove.Invoke(this, new EventArgs());
+        }
+        if (typeId != 0)
+        {
+            gameObject.GetComponent<RoundManager>().endGame();
         }
     }
 

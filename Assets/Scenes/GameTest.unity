@@ -1976,15 +1976,15 @@ MonoBehaviour:
   - ballColor: 0
     hatColor: 0
     hatSpeed: 0
-    changeNum: 15
-    hatNum: 5
+    changeNum: 1
+    hatNum: 3
     endType: 0
   - ballColor: 0
     hatColor: 0
     hatSpeed: 0
-    changeNum: 15
-    hatNum: 5
-    endType: 0
+    changeNum: 1
+    hatNum: 3
+    endType: 1
   selectUI: {fileID: 1154332705}
 --- !u!114 &2087673278
 MonoBehaviour:
@@ -2001,6 +2001,7 @@ MonoBehaviour:
   Speaker: {fileID: 2070770868}
   Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
   ShowWordsDuration: 2
+  typeId: 0
 --- !u!114 &2087673281
 MonoBehaviour:
   m_ObjectHideFlags: 0

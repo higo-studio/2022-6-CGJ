@@ -64,7 +64,6 @@ public class RoundManager : MonoBehaviour
                 if (EventsCenter.EndDialogue != null)
                     EventsCenter.EndDialogue(this, new WrongOrRight(1));
 
-                endGame();
             });
             Debug.Log("下一关");
         }
@@ -73,7 +72,6 @@ public class RoundManager : MonoBehaviour
             // 输入文字
             if (EventsCenter.AskQuestion != null) { }
             EventsCenter.AskQuestion.Invoke(this, new EventArgs());
-            endGame();
         }
     }
 
@@ -96,6 +94,7 @@ public class RoundManager : MonoBehaviour
         // 结束阶段
         if(round.Count> nowIdx+1)
         {
+            Debug.Log("本关结束，下一关~");
             // 下一关
             nextRound();
         }
