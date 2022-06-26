@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 111316538}
   - component: {fileID: 111316540}
   - component: {fileID: 111316539}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hat(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,6 +427,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7370419349475157217, guid: 6e56d9287fdfe3741bdece29403fb808, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7370419350588600744, guid: 6e56d9287fdfe3741bdece29403fb808, type: 3}
       propertyPath: Duration
       value: 0.23
@@ -520,8 +524,16 @@ PrefabInstance:
       value: MovableManager
       objectReference: {fileID: 0}
     - target: {fileID: 7370419350588600746, guid: 6e56d9287fdfe3741bdece29403fb808, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370419350588600746, guid: 6e56d9287fdfe3741bdece29403fb808, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7370419350854019838, guid: 6e56d9287fdfe3741bdece29403fb808, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e56d9287fdfe3741bdece29403fb808, type: 3}
@@ -536,7 +548,7 @@ GameObject:
   - component: {fileID: 580875671}
   - component: {fileID: 580875673}
   - component: {fileID: 580875672}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hat(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,7 +632,7 @@ GameObject:
   - component: {fileID: 644837046}
   - component: {fileID: 644837048}
   - component: {fileID: 644837047}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hat(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,7 +862,7 @@ GameObject:
   - component: {fileID: 875490640}
   - component: {fileID: 875490642}
   - component: {fileID: 875490641}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hat(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1192,7 +1204,7 @@ GameObject:
   - component: {fileID: 1381617810}
   - component: {fileID: 1381617812}
   - component: {fileID: 1381617811}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hat(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1283,7 +1295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1447700124
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1369,7 +1381,7 @@ GameObject:
   - component: {fileID: 1833174709}
   - component: {fileID: 1833174711}
   - component: {fileID: 1833174710}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hat(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1596,7 +1608,7 @@ GameObject:
   - component: {fileID: 1896189278}
   - component: {fileID: 1896189280}
   - component: {fileID: 1896189279}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hat(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1680,7 +1692,7 @@ GameObject:
   - component: {fileID: 2069717057}
   - component: {fileID: 2069717059}
   - component: {fileID: 2069717058}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hat(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1895,3 +1907,4 @@ MonoBehaviour:
   Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
   buttonPrefab: {fileID: 3149218970951068570, guid: 7c903a486585ae34aa5dc579ada25c99, type: 3}
   cg: {fileID: 124366082}
+  feature: {fileID: -298957434979495180, guid: a0394a0fb650a48fda8f4ef2b750cad3, type: 2}

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering.Universal;
 
 [Serializable]
 public class QuestionWrap
@@ -27,6 +28,7 @@ public class QuestionAndAnswer : MonoBehaviour
     public CanvasGroup cg;
     private QuestionItem questionItem;
     private AnswerButton[] buttons;
+    public ScriptableRendererFeature feature;
 
     // Start is called before the first frame update
     void Start()
@@ -43,12 +45,14 @@ public class QuestionAndAnswer : MonoBehaviour
         ShowQuestion();
         if (questionItem.type == 0)
         {
+            feature.SetActive(true);
             // ѡС��
             if (EventsCenter.ChooseHat != null)
                 EventsCenter.ChooseHat.Invoke(this, new EventArgs());
         }
         else if(questionItem.type == 1)
         {
+            feature.SetActive(false);
             buttons = new AnswerButton[questionItem.options.Length];
             int half = questionItem.options.Length / 2;
             // ѡ��
@@ -84,6 +88,7 @@ public class QuestionAndAnswer : MonoBehaviour
         cg.alpha = 0;
         cg.blocksRaycasts = false;
         cg.interactable = false;
+        feature.SetActive(false);
     }
 
     public void OnMakeAnswer(object sender, EventArgs answerIndex)
