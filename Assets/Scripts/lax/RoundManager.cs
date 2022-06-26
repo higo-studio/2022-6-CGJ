@@ -25,7 +25,7 @@ public class RoundManager : MonoBehaviour
 
     public void nextRound()
     {
-        selectUI.SetActive(true);
+        selectUI.SetActive(false);
         nowIdx++;
         this.initRound(nowIdx);
     }
@@ -49,12 +49,10 @@ public class RoundManager : MonoBehaviour
     public async void selectGame(int idx)
     {
         selectUI.SetActive(true);
-        Dialogue talk = gameObject.GetComponent<Dialogue>();
-        if (EventsCenter.AskQuestion != null) { }
-            EventsCenter.AskQuestion.Invoke(this, new EventArgs());
         // 选择阶段
         if (round[nowIdx].endType == RoundEndType.SelectBall)
         {
+            Dialogue talk = gameObject.GetComponent<Dialogue>();
             // 选择小球
             hatRayCastSource = new TaskCompletionSource<int>();
             var hitIdx = await hatRayCastSource.Task;
@@ -62,20 +60,20 @@ public class RoundManager : MonoBehaviour
             var isCorret = hitIdx == idx;
             move.CreatePutBallAnimation(move.GetEndIndexFromStartIndex(hitIdx), isCorret).AppendCallback(() =>
             {
-                if (isCorret)
-                {
-                    Debug.Log("选择成功");
-                }
-                else
-                {
-                    Debug.Log("选择失败");
-                }
+                int result = isCorret ? 1 : 0;
+                if (EventsCenter.EndDialogue != null)
+                    EventsCenter.EndDialogue(this, new WrongOrRight(1));
+
                 endGame();
             });
+            Debug.Log("下一关");
         }
         else
         {
             // 输入文字
+            if (EventsCenter.AskQuestion != null) { }
+            EventsCenter.AskQuestion.Invoke(this, new EventArgs());
+            endGame();
         }
     }
 

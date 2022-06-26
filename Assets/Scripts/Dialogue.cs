@@ -50,13 +50,6 @@ public class Dialogue : MonoBehaviour
         EventsCenter.EndDialogue += OnEnderDialouge;
     }
 
-    void Start()
-    {
-        DisabledUI();
-        Debug.Log("设置不可见");
-        // test
-    }
-
     public void OnStarterDialouge(object sender, EventArgs args)
     {
         Speak(Json, 0);
