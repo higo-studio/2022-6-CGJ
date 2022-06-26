@@ -35,6 +35,7 @@ public class RoundManager : MonoBehaviour
         // 初始化当前关卡的设置
         move.Rounds = round[nowIdx].changeNum;
         move.HatCount = round[nowIdx].hatNum;
+        move.SpeedCurve = round[nowIdx].SpeedCurve;
         startGame();
     }
 

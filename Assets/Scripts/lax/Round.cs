@@ -16,11 +16,6 @@ public class Round
     [Range(0, 5)]
     public int hatColor;
 
-    // 帽子的转速
-    [SerializeField]
-    [Range(0, 100)]
-    public float hatSpeed;
-
     // 帽子转的次数
     [SerializeField]
     [Range(0, 50)]
@@ -34,6 +29,9 @@ public class Round
     // 结局类型：选小球还是输入,1为选小球，2为输入
     [SerializeField]
     public RoundEndType endType;
+
+    [SerializeField]
+    public AnimationCurve SpeedCurve;
 }
 
 public enum RoundEndType
