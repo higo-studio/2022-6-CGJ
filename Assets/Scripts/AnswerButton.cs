@@ -28,7 +28,7 @@ public class AnswerButton : MonoBehaviour
 
     public void SetPositionByOffset(int index)
     {
-        GetComponent<RectTransform>().localPosition = new Vector3(index * interval, 0, 0);
+        //GetComponent<RectTransform>().localPosition = new Vector3(index * interval, 0, 0);
     }
 
     public void Click()
