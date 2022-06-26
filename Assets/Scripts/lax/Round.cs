@@ -6,9 +6,10 @@ using UnityEngine;
 [Serializable]
 public class Round
 {
+    // 蓝绿红白
     // 球的颜色ID
     [SerializeField]
-    [Range(0, 5)]
+    [Range(0, 3)]
     public int ballColor;
 
     // 帽子的颜色ID

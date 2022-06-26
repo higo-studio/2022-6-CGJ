@@ -41,7 +41,8 @@ public class MovableManager : MonoBehaviour
     public Transform Container;
     public RelativePoint APoint;
     public RelativePoint BPoint;
-    public Transform Ball;
+    [SerializeField]
+    public List<Transform> Ball = new List<Transform>();
     public AnimationCurve SpeedCurve;
     public GameObject HatPrefab;
     public int HatCount = 7;
@@ -50,6 +51,7 @@ public class MovableManager : MonoBehaviour
     [Header("Ô¤ÀÀÇø")]
     [ReadOnly]
     public List<Transform> Movables;
+    public int ballIdx = 0;
 
     private Queue<(int, int)> swapTuples;
     private int currentRound = -1;
@@ -143,8 +145,8 @@ public class MovableManager : MonoBehaviour
         {
             var ballPos = movable.position;
             ballPos.y = 0.5f;
-            Ball.position = ballPos;
-            Ball.gameObject.SetActive(true);
+            Ball[ballIdx].position = ballPos;
+            Ball[ballIdx].gameObject.SetActive(true);
         }
         if (delay > 0)
         {
@@ -157,7 +159,14 @@ public class MovableManager : MonoBehaviour
         seq.Join(movable.DOBlendableLocalRotateBy(-rotSide, 1f));
         if (hasBall)
         {
-            seq.AppendCallback(() => Ball.gameObject.SetActive(false));
+            seq.AppendCallback(() =>
+            {
+                for(int i = 0; i < 3; i++)
+                {
+                    Ball[ballIdx].gameObject.SetActive(false);
+                }
+            }
+            );
         }
         return seq;
     }
