@@ -51,7 +51,9 @@ public class RoundManager : MonoBehaviour
         move.HatPrefab = round[nowIdx].HatPrefab;
         talk.Json = round[nowIdx].Json;
         qa.Json = round[nowIdx].Json;
-        startGame();
+        selectUI.SetActive(true);
+        if (EventsCenter.StarterDialogue != null)
+            EventsCenter.StarterDialogue(this, null);
     }
 
     public void startGame()

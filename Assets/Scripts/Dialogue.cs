@@ -63,7 +63,7 @@ public class Dialogue : MonoBehaviour
     }
 
     // type : 0 = ¿ªÊ¼      1 = ´í      2 = ¶Ô
-    void SetJson(TextAsset jsonAseet, int type)
+    public void SetJson(TextAsset jsonAseet, int type)
     {
         typeId = type;
         if (type == 0)
@@ -130,6 +130,10 @@ public class Dialogue : MonoBehaviour
         }else if(typeId == 2)
         {
             gameObject.GetComponent<RoundManager>().endGame(true);
+        }
+        else
+        {
+            gameObject.GetComponent<RoundManager>().startGame();
         }
     }
 
