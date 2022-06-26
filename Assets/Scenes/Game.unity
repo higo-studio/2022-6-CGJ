@@ -673,9 +673,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 972693178596196428, guid: ea93fbb685b474796ab8df5d292e07fd, type: 3}
+      propertyPath: m_Range
+      value: 13.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 972693178596196428, guid: ea93fbb685b474796ab8df5d292e07fd, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540178228224476410, guid: ea93fbb685b474796ab8df5d292e07fd, type: 3}
+      propertyPath: m_Range
+      value: 13.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4540178228224476410, guid: ea93fbb685b474796ab8df5d292e07fd, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6628193627463863368, guid: ea93fbb685b474796ab8df5d292e07fd, type: 3}
       propertyPath: m_Name
       value: Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879112455098300937, guid: ea93fbb685b474796ab8df5d292e07fd, type: 3}
+      propertyPath: m_Range
+      value: 13.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879112455098300937, guid: ea93fbb685b474796ab8df5d292e07fd, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879112455226178112, guid: ea93fbb685b474796ab8df5d292e07fd, type: 3}
+      propertyPath: m_Range
+      value: 13.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879112455226178112, guid: ea93fbb685b474796ab8df5d292e07fd, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879112456257298166, guid: ea93fbb685b474796ab8df5d292e07fd, type: 3}
+      propertyPath: m_Range
+      value: 13.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879112456257298166, guid: ea93fbb685b474796ab8df5d292e07fd, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8912007631425216526, guid: ea93fbb685b474796ab8df5d292e07fd, type: 3}
       propertyPath: m_RootOrder
