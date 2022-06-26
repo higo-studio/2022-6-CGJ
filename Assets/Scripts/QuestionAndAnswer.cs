@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering.Universal;
 
 [Serializable]
 public class QuestionWrap
@@ -27,6 +28,7 @@ public class QuestionAndAnswer : MonoBehaviour
     public CanvasGroup cg;
     private QuestionItem questionItem;
     private AnswerButton[] buttons;
+    public ScriptableRendererFeature feature;
 
     // Start is called before the first frame update
     void Start()
@@ -43,19 +45,20 @@ public class QuestionAndAnswer : MonoBehaviour
         ShowQuestion();
         if (questionItem.type == 0)
         {
-            // 选小球
+            feature.SetActive(true);
+            // 选小锟斤拷
             if (EventsCenter.ChooseHat != null)
                 EventsCenter.ChooseHat.Invoke(this, new EventArgs());
         }
         else if(questionItem.type == 1)
         {
+            feature.SetActive(false);
             buttons = new AnswerButton[questionItem.options.Length];
             int half = questionItem.options.Length / 2;
-            // 选项
+            // 选锟斤拷
             for (int i = 0; i < questionItem.options.Length; i++)
             {
-                buttons[i] = Instantiate(buttonPrefab).GetComponent<AnswerButton>();
-                buttons[i].transform.SetParent(cg.gameObject.transform);
+                buttons[i] = Instantiate(buttonPrefab, cg.gameObject.transform).GetComponent<AnswerButton>();
                 buttons[i].SetPositionByOffset(i - half);
                 buttons[i].Init(i, questionItem.options[i]);
             }
@@ -85,10 +88,13 @@ public class QuestionAndAnswer : MonoBehaviour
         cg.alpha = 0;
         cg.blocksRaycasts = false;
         cg.interactable = false;
+        feature.SetActive(false);
     }
 
     public void OnMakeAnswer(object sender, EventArgs answerIndex)
     {
         DisabledUI();
+        if(EventsCenter.EndDialogue != null)
+            EventsCenter.EndDialogue(this, new EventArgs());
     }
 }

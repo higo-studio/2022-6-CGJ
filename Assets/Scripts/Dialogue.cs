@@ -5,9 +5,15 @@ using UnityEngine.UI;
 using System;
 
 [Serializable]
-public class JsonArrayWrap<T>
+public class StartJsonArrayWrap<T>
 {
-    public T[] items;
+    public T[] startItems;
+}
+
+[Serializable]
+public class EndJsonArrayWrap<T>
+{
+    public T[] endItems;
 }
 [Serializable]
 public class DialogueItem
@@ -30,6 +36,11 @@ public class Dialogue : MonoBehaviour
     private float timer = 0;
     private int currIndex;
 
+    private void Awake()
+    {
+        EventsCenter.StarterDialogue += OnStarterDialouge;
+        EventsCenter.EndDialogue += OnEnderDialouge;
+    }
 
     void Start()
     {
@@ -38,13 +49,27 @@ public class Dialogue : MonoBehaviour
         // test
     }
 
-    public void init() {
-        Speak(Json);
+    public void OnStarterDialouge(object sender, EventArgs args)
+    {
+        Speak(Json, 0);
     }
 
-    void SetJson(TextAsset jsonAseet)
+    public void OnEnderDialouge(object sender, EventArgs args)
     {
-        items = JsonUtility.FromJson<JsonArrayWrap<DialogueItem>>(jsonAseet.text).items;
+        Speak(Json, 1);
+    }
+
+    // type : 0 = 开始      1 = 问题后的对话
+    void SetJson(TextAsset jsonAseet, int type)
+    {
+        if(type == 0)
+        {
+            items = JsonUtility.FromJson<StartJsonArrayWrap<DialogueItem>>(Json.text).startItems;
+        }
+        else if(type == 1)
+        {
+            items = JsonUtility.FromJson<EndJsonArrayWrap<DialogueItem>>(Json.text).endItems;
+        }
     }
 
     void Update()
@@ -73,10 +98,10 @@ public class Dialogue : MonoBehaviour
         ShowWords(items[currIndex].content);
     }
 
-    public void Speak(TextAsset jsonAsset)
+    public void Speak(TextAsset jsonAsset, int type)
     {
         speaking = true;
-        SetJson(jsonAsset);
+        SetJson(jsonAsset, type);
         EnableUI();
         Next(0);
     }
@@ -85,10 +110,6 @@ public class Dialogue : MonoBehaviour
     {
         speaking = false;
         DisabledUI();
-        if(EventsCenter.AskQuestion != null)
-        {
-            EventsCenter.AskQuestion.Invoke(this, new EventArgs());
-        }
     }
 
     public void EnableUI()

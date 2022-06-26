@@ -1,5 +1,20 @@
 {
-    "items": [
+    "startItems":[
+        {
+            "speaker": "",
+            "content": "注意看",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "这个男人正在",
+            "menuText": "",
+            "linkTo": [-1]
+        }
+    ],
+
+    "endItems": [
         {
             "speaker": "",
             "content": "球在哪",
