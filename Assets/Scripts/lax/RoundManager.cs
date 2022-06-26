@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Rendering.Universal;
 using System.Collections.Generic;
 using System;
 using System.Threading.Tasks;
@@ -14,6 +16,11 @@ public class RoundManager : MonoBehaviour
 
     private int nowIdx = 1;
     MovableManager move;
+
+    public ScriptableRendererFeature feature;
+    public GraphicRaycaster raycaster;
+    public LayerMask everything;
+    public LayerMask nothing;
 
     private void Start()
     {
@@ -55,6 +62,10 @@ public class RoundManager : MonoBehaviour
         {
             Dialogue talk = gameObject.GetComponent<Dialogue>();
             // 选择小球
+
+            feature.SetActive(true);
+            raycaster.blockingMask = nothing;
+
             hatRayCastSource = new TaskCompletionSource<int>();
             var hitIdx = await hatRayCastSource.Task;
 
@@ -64,6 +75,8 @@ public class RoundManager : MonoBehaviour
                 int result = isCorret ? 1 : 0;
                 if (EventsCenter.EndDialogue != null)
                     EventsCenter.EndDialogue(this, new WrongOrRight(1));
+                feature.SetActive(false);
+                raycaster.blockingMask = everything;
 
             });
             Debug.Log("下一关");

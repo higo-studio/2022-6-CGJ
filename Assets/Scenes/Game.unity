@@ -533,7 +533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7370419350854019838, guid: 6e56d9287fdfe3741bdece29403fb808, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e56d9287fdfe3741bdece29403fb808, type: 3}
@@ -1865,17 +1865,35 @@ MonoBehaviour:
   round:
   - ballColor: 0
     hatColor: 0
-    hatSpeed: 0
     changeNum: 1
     hatNum: 4
     endType: 0
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
   - ballColor: 0
     hatColor: 0
-    hatSpeed: 0
     changeNum: 1
     hatNum: 3
     endType: 0
+    SpeedCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
   selectUI: {fileID: 1447700123}
+  feature: {fileID: -298957434979495180, guid: a0394a0fb650a48fda8f4ef2b750cad3, type: 2}
+  raycaster: {fileID: 1154332706}
+  everything:
+    serializedVersion: 2
+    m_Bits: 2147483647
+  nothing:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &2087673278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1891,6 +1909,7 @@ MonoBehaviour:
   Speaker: {fileID: 2070770868}
   Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
   ShowWordsDuration: 2
+  typeId: 0
 --- !u!114 &2087673281
 MonoBehaviour:
   m_ObjectHideFlags: 0
