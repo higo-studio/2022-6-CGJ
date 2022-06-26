@@ -120,6 +120,7 @@ public class RoundManager : MonoBehaviour
         if (!success)
         {
             Debug.Log(" ß∞‹¡À£¨÷ÿ¿¥");
+            Debug.Log(nowIdx);
             this.initRound(nowIdx);
             return;
         }

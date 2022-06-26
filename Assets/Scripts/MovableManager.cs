@@ -72,7 +72,7 @@ public class MovableManager : MonoBehaviour
     {
         currentRound = -1;
         swapTuples.Clear();
-        
+        Debug.Log("HERE");
         CollectHats();
         SettleupHats();
         indexs = new int[Movables.Count];
@@ -96,7 +96,6 @@ public class MovableManager : MonoBehaviour
 
     public void CollectHats()
     {
-        if (HatCount == Movables.Count) return;
         Movables.Clear();
         foreach (Transform trs in Container)
         {

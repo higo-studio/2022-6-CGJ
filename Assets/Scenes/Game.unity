@@ -2031,7 +2031,7 @@ MonoBehaviour:
   - ballColor: 1
     HatPrefab: {fileID: 4162220615133996872, guid: a4790129731744341bf97bd5909ab707, type: 3}
     changeNum: 3
-    hatNum: 3
+    hatNum: 6
     endType: 0
     SpeedCurve:
       serializedVersion: 2
