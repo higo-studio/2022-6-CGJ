@@ -1,19 +1,9 @@
 {
     "startItems":[
+        
         {
             "speaker": "",
-            "content": "又拿错了，这帮人真的是...",
-            "menuText": "",
-            "linkTo": []
-        }, {
-            "speaker": "",
-            "content": "额...算了，开始吧",
-            "menuText": "",
-            "linkTo": []
-        },
-        {
-            "speaker": "",
-            "content": "这次是真的不是我吩咐的",
+            "content": "开始吧",
             "menuText": "",
             "linkTo": [-1]
         }
@@ -36,6 +26,23 @@
             "speaker": "",
             "content": "总之，恭喜你答对这题",
             "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "[下一关]",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "又...哎算了，让准备道具的别来上班了",
+            "menuText": "",
+            "linkTo": []
+        }, {
+            "speaker": "",
+            "content": "别在意，继续",
+            "menuText": "",
             "linkTo": [-1]
         }
     ],
@@ -50,6 +57,12 @@
         {
             "speaker": "",
             "content": "别被刚刚的恶作剧影响了",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "[重来]",
             "menuText": "",
             "linkTo": [-1]
         }

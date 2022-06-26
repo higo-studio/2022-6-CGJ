@@ -2,18 +2,7 @@
     "startItems":[
         {
             "speaker": "",
-            "content": "哎呀，拿错道具球了",
-            "menuText": "",
-            "linkTo": []
-        }, {
-            "speaker": "",
-            "content": "这帮人干什么吃的，回去扣人工",
-            "menuText": "",
-            "linkTo": []
-        },
-        {
-            "speaker": "",
-            "content": "无所谓了，开始吧",
+            "content": "开始吧",
             "menuText": "",
             "linkTo": [-1]
         }
@@ -30,6 +19,23 @@
             "speaker": "",
             "content": "小恶作剧，不要在意，继续",
             "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "[下一关]",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "又拿错了，这帮人真的是...",
+            "menuText": "",
+            "linkTo": []
+        }, {
+            "speaker": "",
+            "content": "额...这次是真的不是我吩咐的",
+            "menuText": "",
             "linkTo": [-1]
         }
     ],
@@ -45,6 +51,12 @@
             "speaker": "",
             "content": "不会以为真拿错吧",
             "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "[重来]",
+            "menuText": "",
             "linkTo": [-1]
         }
     ],
@@ -53,6 +65,6 @@
         "type": 1,
         "question": "那么，问题是...球是什么颜色？",
         "options": ["蓝", "绿", "红"],
-        "answer" : 3
+        "answer" : 2
     }
 }

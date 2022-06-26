@@ -31,6 +31,12 @@
             "speaker": "",
             "content": "感谢你的参与，再会！",
             "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "[下一关]",
+            "menuText": "",
             "linkTo": [-1]
         }
     ],
@@ -39,6 +45,12 @@
         {
             "speaker": "",
             "content": "怎样，猜不到吧，很蓝的啦",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "[重来]",
             "menuText": "",
             "linkTo": [-1]
         }

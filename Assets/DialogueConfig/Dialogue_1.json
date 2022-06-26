@@ -43,6 +43,12 @@
             "speaker": "",
             "content": "比较简单，接下来该增加难度咯",
             "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "[下一关]",
+            "menuText": "",
             "linkTo": [-1]
         }
     ],
@@ -57,6 +63,12 @@
         {
             "speaker": "",
             "content": "这么简单都猜错吗",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "[重来]",
             "menuText": "",
             "linkTo": [-1]
         }

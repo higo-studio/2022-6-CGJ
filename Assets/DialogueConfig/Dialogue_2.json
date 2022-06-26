@@ -19,6 +19,12 @@
             "speaker": "",
             "content": "或许还是太简单了，再来",
             "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "[下一关]",
+            "menuText": "",
             "linkTo": [-1]
         }
     ],
@@ -33,6 +39,12 @@
         {
             "speaker": "",
             "content": "看来刚刚是凑巧蒙对罢了",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "[重来]",
             "menuText": "",
             "linkTo": [-1]
         }

@@ -25,6 +25,23 @@
             "speaker": "",
             "content": "夜还很长，继续吧",
             "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "[下一关]",
+            "menuText": "",
+            "linkTo": []
+        },   
+        {
+            "speaker": "",
+            "content": "哎呀，拿错道具球了",
+            "menuText": "",
+            "linkTo": []
+        }, {
+            "speaker": "",
+            "content": "这帮人干什么吃的，回去扣人工",
+            "menuText": "",
             "linkTo": [-1]
         }
     ],
@@ -39,6 +56,12 @@
         {
             "speaker": "",
             "content": "只是多了1个帽子就不会了？",
+            "menuText": "",
+            "linkTo": []
+        },
+        {
+            "speaker": "",
+            "content": "[重来]",
             "menuText": "",
             "linkTo": [-1]
         }
