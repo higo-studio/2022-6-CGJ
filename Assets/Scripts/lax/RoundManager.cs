@@ -16,16 +16,21 @@ public class RoundManager : MonoBehaviour
 
     private int nowIdx = 1;
     MovableManager move;
+    Dialogue talk;
+    QuestionAndAnswer qa;
 
     public ScriptableRendererFeature feature;
     public GraphicRaycaster raycaster;
     public LayerMask everything;
     public LayerMask nothing;
 
+
     private void Start()
     {
         selectUI.SetActive(false);
         move = gameObject.GetComponent<MovableManager>();
+        talk = gameObject.GetComponent<Dialogue>();
+        qa = gameObject.GetComponent<QuestionAndAnswer>();
         endFunc += selectGame;
         this.initRound(nowIdx);
     }
@@ -43,6 +48,8 @@ public class RoundManager : MonoBehaviour
         move.Rounds = round[nowIdx].changeNum;
         move.HatCount = round[nowIdx].hatNum;
         move.SpeedCurve = round[nowIdx].SpeedCurve;
+        talk.Json = round[nowIdx].Json;
+        qa.Json = round[nowIdx].Json;
         startGame();
     }
 
@@ -73,6 +80,7 @@ public class RoundManager : MonoBehaviour
             move.CreatePutBallAnimation(move.GetEndIndexFromStartIndex(hitIdx), isCorret).AppendCallback(() =>
             {
                 int result = isCorret ? 1 : 0;
+                Debug.Log(result);
                 if (EventsCenter.EndDialogue != null)
                     EventsCenter.EndDialogue(this, new WrongOrRight(1));
                 feature.SetActive(false);

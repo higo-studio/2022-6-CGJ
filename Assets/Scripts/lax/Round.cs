@@ -32,6 +32,9 @@ public class Round
 
     [SerializeField]
     public AnimationCurve SpeedCurve;
+
+    [SerializeField]
+    public TextAsset Json;
 }
 
 public enum RoundEndType
