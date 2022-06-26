@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 124366080}
   - component: {fileID: 124366082}
   - component: {fileID: 124366081}
+  - component: {fileID: 124366083}
   m_Layer: 5
   m_Name: QA
   m_TagString: Untagged
@@ -274,6 +275,32 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &124366083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124366079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: -400
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 100
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &190282094
 GameObject:
   m_ObjectHideFlags: 0
@@ -1949,9 +1976,15 @@ MonoBehaviour:
   - ballColor: 0
     hatColor: 0
     hatSpeed: 0
-    changeNum: 15
-    hatNum: 5
+    changeNum: 1
+    hatNum: 3
     endType: 0
+  - ballColor: 0
+    hatColor: 0
+    hatSpeed: 0
+    changeNum: 1
+    hatNum: 3
+    endType: 1
   selectUI: {fileID: 1154332705}
 --- !u!114 &2087673278
 MonoBehaviour:
@@ -1968,6 +2001,7 @@ MonoBehaviour:
   Speaker: {fileID: 2070770868}
   Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
   ShowWordsDuration: 2
+  typeId: 0
 --- !u!114 &2087673281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1984,3 +2018,4 @@ MonoBehaviour:
   Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
   buttonPrefab: {fileID: 3149218970951068570, guid: 7c903a486585ae34aa5dc579ada25c99, type: 3}
   cg: {fileID: 124366082}
+  feature: {fileID: -298957434979495180, guid: a0394a0fb650a48fda8f4ef2b750cad3, type: 2}
