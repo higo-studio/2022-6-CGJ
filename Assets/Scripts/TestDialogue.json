@@ -48,6 +48,6 @@
         "type": 1,
         "question": "球在哪",
         "options": ["嗨嗨嗨", "来了嗷", "老干妈"],
-        "anwser" : 2
+        "answer" : 2
     }
 }
