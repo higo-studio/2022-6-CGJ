@@ -13,8 +13,7 @@ public class Round
 
     // 帽子的颜色ID
     [SerializeField]
-    [Range(0, 5)]
-    public int hatColor;
+    public GameObject HatPrefab;
 
     // 帽子转的次数
     [SerializeField]

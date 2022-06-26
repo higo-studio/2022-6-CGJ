@@ -535,6 +535,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7370419350854019838, guid: 6e56d9287fdfe3741bdece29403fb808, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e56d9287fdfe3741bdece29403fb808, type: 3}
 --- !u!1 &580875670
@@ -1880,7 +1884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   round:
   - ballColor: 0
-    hatColor: 0
+    HatPrefab: {fileID: 0}
     changeNum: 1
     hatNum: 4
     endType: 0
@@ -1892,7 +1896,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     Json: {fileID: 0}
   - ballColor: 0
-    hatColor: 0
+    HatPrefab: {fileID: 4162220615133996872, guid: a4790129731744341bf97bd5909ab707, type: 3}
     changeNum: 3
     hatNum: 3
     endType: 0
@@ -1922,7 +1926,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
   - ballColor: 0
-    hatColor: 0
+    HatPrefab: {fileID: 4162220615133996872, guid: a4790129731744341bf97bd5909ab707, type: 3}
     changeNum: 3
     hatNum: 4
     endType: 0
@@ -1952,7 +1956,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     Json: {fileID: 4900000, guid: 0d92c0252568dc64ebbef63328bff178, type: 3}
   - ballColor: 0
-    hatColor: 0
+    HatPrefab: {fileID: 4162220615133996872, guid: a4790129731744341bf97bd5909ab707, type: 3}
     changeNum: 3
     hatNum: 5
     endType: 0

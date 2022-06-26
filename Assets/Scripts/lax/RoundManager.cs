@@ -48,6 +48,7 @@ public class RoundManager : MonoBehaviour
         move.Rounds = round[nowIdx].changeNum;
         move.HatCount = round[nowIdx].hatNum;
         move.SpeedCurve = round[nowIdx].SpeedCurve;
+        move.HatPrefab = round[nowIdx].HatPrefab;
         talk.Json = round[nowIdx].Json;
         qa.Json = round[nowIdx].Json;
         startGame();
