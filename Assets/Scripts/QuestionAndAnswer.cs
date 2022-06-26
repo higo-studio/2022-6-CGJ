@@ -89,7 +89,6 @@ public class QuestionAndAnswer : MonoBehaviour
         cg.alpha = 0;
         cg.blocksRaycasts = false;
         cg.interactable = false;
-        feature.SetActive(false);
     }
 
     public void OnMakeAnswer(object sender, EventArgs answerIndex)

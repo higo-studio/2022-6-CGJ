@@ -2366,6 +2366,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     Json: {fileID: 4900000, guid: 4757d6023147a75469fbfef0d6718d02, type: 3}
   selectUI: {fileID: 1447700123}
+  tallUI: {fileID: 124366080}
   feature: {fileID: -298957434979495180, guid: a0394a0fb650a48fda8f4ef2b750cad3, type: 2}
   raycaster: {fileID: 1154332706}
   everything:

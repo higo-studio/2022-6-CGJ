@@ -14,7 +14,9 @@ public class RoundManager : MonoBehaviour
 
     public GameObject selectUI;
 
-    private int nowIdx = 1;
+    public Transform tallUI;
+
+    private int nowIdx = 4;
     MovableManager move;
     Dialogue talk;
     QuestionAndAnswer qa;
@@ -49,6 +51,7 @@ public class RoundManager : MonoBehaviour
         move.HatCount = round[nowIdx].hatNum;
         move.SpeedCurve = round[nowIdx].SpeedCurve;
         move.HatPrefab = round[nowIdx].HatPrefab;
+        move.ballIdx = round[nowIdx].ballColor;
         talk.Json = round[nowIdx].Json;
         qa.Json = round[nowIdx].Json;
         selectUI.SetActive(true);
@@ -118,7 +121,10 @@ public class RoundManager : MonoBehaviour
 
     public void endGame(bool success)
     {
-
+        for (int i = 0; i < tallUI.childCount; i++)
+        {
+            Destroy(tallUI.GetChild(i).gameObject);
+        }
         if (!success)
         {
             Debug.Log("Ê§°ÜÁË£¬ÖØÀ´");
